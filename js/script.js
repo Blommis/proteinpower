@@ -42,6 +42,7 @@ closeCart.addEventListener('click', () => {
 document.querySelectorAll('.buy-button').forEach(button => {
     button.addEventListener('click', function(event) {
         event.preventDefault(); // Förhindra standardbeteendet för länken
+        console.log("Köp-knappen klickad!"); // Lägg till loggning här för att verifiera att klickhändelsen aktiveras
 
         // Hitta elementen som representerar produkten
         const productElement = this.closest('.product');
@@ -61,6 +62,8 @@ document.querySelectorAll('.buy-button').forEach(button => {
 function addToCart(productName, price) {
     // Lägg till produkten i varukorgen
     cart.push({ name: productName, price: price });
+    
+    console.log("Produkten", productName, "lades till i varukorgen!"); // Lägg till loggning här för att verifiera att produkten läggs till korrekt
 
     // Uppdatera varukorgen på sidan
     updateCart();
