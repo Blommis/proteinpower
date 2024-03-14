@@ -1,0 +1,152 @@
+
+
+.buy-button:hover {
+    background-color: lightblue
+}
+.hero{
+    background-image: url("../images/herostartsidan.png");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 300px; /* Justera kuddavståndet efter behov */
+   
+}
+.cta-button{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(18, 38, 58);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 1.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    Position: absolute;
+    left: 220px;
+}
+.cta-button:hover{
+    background-color: lightblue;
+}
+
+.Storsäljare{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-left: 15px;
+    font-size: 20px;
+   
+}
+
+
+.buy-button {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 10px;
+    background-color:  rgb(18, 38, 58);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    align-self: flex-end; /* Align button to the end of the container */
+    margin-top: auto; /* Push button to the bottom */
+    
+}
+
+
+.buy-button:hover {
+    background-color: lightblue
+}
+
+.Träningskläder{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-left: 15px;
+}
+.product {
+    margin:15px; /* Minskat avstånd mellan produkter */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 300%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex; /* Add flex display */
+    flex-direction: column; /* Arrange elements vertically */
+   
+}
+
+
+.product h2 {
+    margin-top: 0;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product p {
+    margin-bottom: 5px;
+}
+
+.product .ratings {
+    margin-top: 10px;
+}
+
+.product .ratings .star {
+    color: gold;
+}
+
+.product .ratings .rating-average {
+    font-size: 14px;
+    color: #555;
+}
+
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product {
+    /* Your existing CSS */
+    display: flex; /* Add flex display */
+    flex-direction: column; /* Arrange elements vertically */
+}
+
+.Kosttillskott{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-left: 15px;
+    font-size: 15px;
+}
+
+.hero2{
+    background-image: url("../images/suddig-bodybuilders.png");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 300px; /* Justera kuddavståndet efter behov */
+    
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.cta-button2{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(18, 38, 58);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 1.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    Position: absolute;
+    right: 550px;
+}
+.cta-button2:hover{
+    background-color: lightblue;
+}

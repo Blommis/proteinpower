@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontaktsidan</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/meny.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/kontaktaoss.css">
+    <link rel="stylesheet" href="/css/kundvagn.css"> 
+</head>
+<body>
+    <header>
+        <div class="top-section">
+        <div class="logo">ProteinPower.se</div>
+        <div><input type="text" class="search" placeholder="Sök bland våra produkter, recept..."></div>
+        </div>
+    <div>
+        <nav class="menu">
+            <button id="homeButton"> <a href="index.html">Hem</button>
+            <div class="dropdown">
+            <button id="productsButton"> <a href="produkt.html">Produkter</button>
+            <div class="dropdown-content">
+                <a href="#supplements">Kosttillskott</a>
+                <a href="#clothing">Träningskläder</a>
+            </div>
+        </div>
+            <button id="campaignButton">Aktuella kampanjer</button>
+            <button id="aboutButton"><a href="omoss.html">Om oss</button>
+            <button id="contactButton"><a href="kontaktaoss.html">Kontakta oss</a></button>
+        </div>
+        <div class="icon-cart"> 
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.3L19 7H7.3"/>
+              </svg>
+              <span>0</span>
+        </div>
+    </div>
+    <div>
+       
+        </nav>
+    </header>
+    
+    
+    
+    <div class="kontaktaosshero"> 
+        <h1 style="color: white;"> Behöver du komma <br>i kontakt med oss?</h1>
+        <p style="color: white;" style="font-size: larger;">Tveka inte att nå ut till vår kundsupport.<br> Vi är här för att hjälpa dig.</p>
+        <ul class="list-section">
+            <li><a href="kontaktaoss.html" class="telefonhittahit" style="color: white;">Telefonnummer: 123-456-789</a></li>
+            <li><a href="kontaktaoss.html"  class="button-link2" class="telefonhittahit">Hitta till vår butik</a></li>
+        </ul>
+        <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2031.4345642589324!2d13.531284376437055!3d59.392461974644945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465cb167f20d4065%3A0xadf23314a4169b8c!2sEdeb%C3%A4cksgatan%207%2C%20654%2061%20Karlstad!5e0!3m2!1ssv!2sse!4v1710244163450!5m2!1ssv!2sse" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+    </div>
+   
+    
+    
+    <br><br>
+
+    <fieldset style="width: 30%;">
+        <h2 style="margin: 30px;">Kundtjänst öppettider:</h2>
+        <p>Måndag-fredag: 08-16<br>Lördag-söndag:Stängt</p>
+    </fieldset>
+    <br><br>
+    <form id="form" name="form" method="post" action="">
+
+        <fieldset style="width: 30%;">
+         <h3 class="typsnitt">Kontakta oss via mail</h3>
+        <br>
+        <label for="fnamn" class="typsnitt">Förnamn:</label> <br>
+        <input type="text"  name="fnamn" id="fnamn" /> <br>
+        <label for="enamn" class="typsnitt">Efternamn:</label> <br>
+        <input type="text" name="enamn" id="enamn" /> <br>
+        <label for="epost"class="typsnitt">E-postadress:</label> <br>
+        <input type="text" name="epost" id="epost" /> <br>
+        <label for="meddelande"class="typsnitt">Meddelande:</label> <br>
+        <textarea name="meddelande" id="meddelande" cols="40" rows="5"></textarea> <br>
+        <label for="skicka"></label>
+        <input type="submit" name="skicka" id="skicka" value="Skicka meddelandet" />
+        </fieldset>
+        </form>
+         <fieldset class="faq-section">
+        <h3 class="typsnitt">Vanliga frågor och svar</h3>
+        <ul>
+            <li>
+                <h4>Hur kontaktar jag kundtjänst?</h4>
+                <p>Du kan kontakta vår kundtjänst via telefon, e-post eller besöka vår butik personligen.</p>
+            </li>
+            <li>
+                <h4>Hur lång tid tar det att få svar på min e-post?</h4>
+                <p>Vi strävar efter att svara inom 24 timmar från mottagandet av ditt meddelande.</p>
+            </li>
+            <li>
+                <h4>Hur mycket proteinpulver bör jag konsumera per dag?</h4>
+                <p>Det beror på dina individuella mål och proteinbehov, men generellt sett rekommenderas det att konsumera mellan 20-40 gram proteinpulver per portion, upp till 1-2 portioner per dag.</p>
+            </li>
+            <!-- Andra frågor och svar här -->
+        </ul>
+    </fieldset>
+        <br>
+        <footer>
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3><a href="index.html" target="footer-container">Hem</a></h3>
+                   
+                </div>
+                <div class="footer-section">
+                    <h3> <a href="produkt.html" target="footer-container">Produkter</a></h3>
+                    <ul class="text"> 
+                        <li><a href="produkt.html" target="footer-container">Kosttillskott</a></li>
+                        <br>
+                        <li><a href="produkt.html" target="footer-container">Träningskläder</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3> <a href="recept.html" target="footer-container">Aktuell kampanj</a></h3>
+    
+                </div>
+                <div class="footer-section">
+                    <h3> <a href="Omoss.html" target="footer-container">Om oss</a></h3>
+    
+                </div>
+                   
+                   <div class="footer-section">
+                    <h3><a href="kontaktaoss.html" target="footer-container">Kontakta oss</a></h3>
+                    <ul class="text">
+                        <li><a href="kontaktaoss.html" target="footer-container">Telefonnummer: 123-456-789</a></li>
+                        <br>
+                        <li><a href="kontaktaoss.html" class="button-link">Hitta hit</a></li>
+                    </ul>
+        
+                 
+                </div>
+            </div>
+            <div class="social-media" class="text">
+                <href="#"><img src="images/Namnlös design (30).png" alt="Instagram"></a>
+                <href="#"><img src="images/Namnlös design (32).png" alt="Facebook"></a>
+            </div>
+        </footer>
+
+        
+    <script src="js/script.js"></script>
+</body>
+</html>

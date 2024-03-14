@@ -1,0 +1,156 @@
+ul {
+    float: left;
+    margin-top: 25px;
+}
+
+ul li {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 1);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color:  rgb(227, 236, 244);
+    padding: 10px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px; /* Lägg till lite mellanrum nedanför top-section */
+}
+
+.logo {
+    font-size: 40px;
+    height:20px;
+
+    font-weight: bold;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+
+.search {
+    padding: 12px;
+    width: 540px;
+    font-size: 16px;
+    position: relative;
+    right: 340px;
+    position: relative;
+    top: 15px;
+    
+}
+
+.menu {
+    display: flex;
+}
+
+.menu button {
+    padding: 10px;
+    margin-right: 15px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.menu button:hover{
+    background-color: lightblue;
+}
+
+.submenu {
+    position: relative;
+}
+
+.submenu button {
+    padding: 8px 16px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 4px;
+    cursor:pointer;
+}
+
+.submenu .submenu-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 150px;
+    
+   
+}
+
+.submenu:hover .submenu-content {
+    display: block;
+}
+
+
+/* Styla dropdown-menyn */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 585px;
+    top: 110px;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 5px;
+    margin: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor:pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+}
+
+/* Visa dropdown-menyn när knappen klickas */
+.dropdown:hover .dropdown-content {
+    display:block;
+}
+
+/* Styla länkarna i dropdown-menyn */
+.dropdown-content a {
+    display: block;
+    padding: 7px;
+    text-decoration: none;
+    color: black;
+}
+
+/* Styla länkhovring i dropdown-menyn */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+.litenheader {
+    display: flex;
+    height: 30px;
+    background-color: rgb(18, 38, 58);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 1px; /* Lägg till lite utrymme runt texten */
+    color: white;
+    margin-right: 10px; /* Lägg till önskad marginal här */
+    justify-content: space-between;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between; /* Justera mellanrummet mellan td-elementen */
+}
