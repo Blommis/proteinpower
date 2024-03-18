@@ -55,6 +55,8 @@ document.querySelectorAll('.buy-button').forEach(button => {
 
         // Uppdatera varukorgen i varukorgsikonen
         updateCartIcon();
+
+       
     });
 });
 
@@ -63,7 +65,7 @@ function addToCart(productName, price) {
     // Lägg till produkten i varukorgen
     cart.push({ name: productName, price: price });
     
-    console.log("Produkten", productName, "lades till i varukorgen!"); // Lägg till loggning här för att verifiera att produkten läggs till korrekt
+   
 
     // Uppdatera varukorgen på sidan
     updateCart();
@@ -79,3 +81,44 @@ function updateCartIcon() {
     // Uppdatera varukorgen i varukorgsikonen baserat på den aktuella varukorgen (cart)
     iconCartSpan.textContent = cart.length; // Uppdatera antalet produkter i varukorgen
 }
+
+
+// Funktion för att uppdatera varukorgen på sidan
+function updateCart() {
+    // Töm listan över produkter i varukorgen
+    listCartHTML.innerHTML = '';
+
+
+    // Loopa igenom varje produkt i varukorgen
+    cart.forEach(product => {
+        // Skapa en ny rad i varukorgen för varje produkt
+        const productHTML = document.createElement('div');
+        productHTML.classList.add('cart-item');
+        productHTML.innerHTML = `
+        <img src="images/images/Herr-tshirt.png${product.image}" alt="${product.name}  ${product.price} kr" >
+        <div class="quantity">
+                <span class="minus"><</span>
+                <span>1</span>
+                <span class="plus">></span>
+            </div>
+            <button class="remove">Ta bort</button>
+
+        `   
+        ;
+        // Lägg till den nya raden i varukorgen
+        listCartHTML.appendChild(productHTML);
+    });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

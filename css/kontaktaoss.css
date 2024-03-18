@@ -1,8 +1,8 @@
 .kontaktaosshero{
-    background-image: url("../images/kontaktaosshero.jpg");
+    background-image: url("../images/headkontaktaoss.png");
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+   
     padding: 120px;
     height: 340px;
 }

@@ -23,7 +23,7 @@
     text-decoration: none;
     align-self: flex-end; /* Align button to the end of the container */
     margin-top: auto; /* Push button to the bottom */
-    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .buy-button:hover {
