@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V3CFL3VF7T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-V3CFL3VF7T');
+</script>
+<meta name="description" content="Proteinpower är en enkel webshop för träningskläder och kosttillskott">
+<meta name="keywords" content="träningskläder, kosttillskott, träningskläder herr, träningskläder dam, proteinpulver, träningströja, kreatin, pre work out">
+<meta name="author" content="Karl Blomquist">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produktsida</title>
@@ -64,14 +76,24 @@
         </div>
         </div>
     <div class="products-container" class="listcart">
-        <div class="product" class="item">
-            
+        <div class="product">
             <h2>T-shirt - Herr</h2>
-            
             <img src="images/Herr-tshirt.png">
             <p>Pris: 299kr</p>
-            <p>Tillgängliga storlekar: S, M, L</p>
-            <p>Tillgängliga färger: Svart, Röd, Blå</p>
+            <p>Storlek: 
+                <select name="size">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                </select>
+            </p>
+            <p>Färg:
+                <select name="color">
+                    <option value="Svart">Svart</option>
+                    <option value="Röd">Röd</option>
+                    <option value="Blå">Blå</option>
+                </select>
+            </p>
             
             <div class="ratings">
                 <span class="star">&#9733;</span>
@@ -81,8 +103,9 @@
                 <span class="star">&#9734;</span>
                 <span class="rating-average">(4.0)</span>
             </div>
-            <button class="buy-button" class="addCart" >Köp nu</button>
+            <button class="buy-button" >Köp nu</button>
         </div>
+        
         
     
         <!-- Andra produkt börjar här -->
@@ -90,8 +113,20 @@
             <h2>T-shirt - Dam</h2>
             <img src="images/Dam_tshirt.png">
             <p>Pris: 299kr</p>
-            <p>Tillgängliga storlekar: XS, S, M</p>
-            <p>Tillgängliga färger: Vit, Svart, Blå</p>
+            <p>Storlek: 
+                <select name="size">
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                </select>
+            </p>
+            <p>Färg:
+                <select name="color">
+                    <option value="Svart">Svart</option>
+                    <option value="Röd">Röd</option>
+                    <option value="Blå">Blå</option>
+                </select>
+            </p>
             <div class="ratings">
                 <span class="star">&#9733;</span>
                 <span class="star">&#9733;</span>
@@ -100,15 +135,25 @@
                 <span class="star">&#9734;</span>
                 <span class="rating-average">(4.0)</span>
             </div>
-            <a href="kundvagn.html" class="buy-button">Köp nu</a>
+            <button  class="buy-button" >Köp nu</button>
         </div>
         <!-- Andra produkt slutar här -->
         <div class="product">
             <h2>Långärmad tröja - Herr</h2>
             <img src="images/Herr-långärmad.png">
             <p>Pris: 349kr</p>
-            <p>Tillgänliga storlekar: M, L, XL</p>
-            <p>Tillgängliga färger: Vit, Grön, Blå</p>
+            <p>Storlek: 
+                <select name="size">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                </select></p>
+            <p>Färg:
+                <select name="color">
+                    <option value="Svart">Svart</option>
+                    <option value="Röd">Röd</option>
+                    <option value="Blå">Blå</option>
+                </select></p>
             <div class="ratings">
                 <span class="star">&#9733;</span>
                 <span class="star">&#9733;</span>
@@ -117,23 +162,32 @@
                 <span class="star">&#9734;</span>
                 <span class="rating-average">(4.0)</span>
             </div>
-            <a href="kundvagn.html" class="buy-button">Köp nu</a>
+            <button  class="buy-button" >Köp nu</button>
         </div>
         <div class="product">
             <h2>Jacka - Muscle fit - Herr</h2>
             <img src="images/Herr_jacka.png">
             <p>Pris: 499kr</p>
-            <p>Tillgängliga storlekar: M, L, XL, XLL</p>
-            <p>Tillgängliga färger:Svart, Blå</p>
+            <p>Storlek: <select name="size">
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+            </select></p>
+            <p>Färg:
+                <select name="color">
+                    <option value="Svart">Svart</option>
+                    <option value="Röd">Röd</option>
+                    <option value="Blå">Blå</option>
+                </select></p>
             <div class="ratings">
                 <span class="star">&#9733;</span>
                 <span class="star">&#9733;</span>
                 <span class="star">&#9733;</span>
                 <span class="star">&#9733;</span>
-                <span class="star">&#9734;</span>
+                <span class="star">&#9733;</span>
                 <span class="rating-average">(5.0)</span>
             </div>
-            <a href="kundvagn.html" class="buy-button">Köp nu</a>
+            <button class="buy-button" >Köp nu</button>
         </div>
     </div>
     <div class="Kosttillskott"><h1>Kosttillskott</h1>
@@ -143,8 +197,15 @@
             <h2>Whey 100 - Proteinpulver</h2>
             <img src="images/produkt-proteinpulver.png">
             <p>Pris: 199kr</p>
-            <p>Tillgänglig: 1KG</p>
-            <p>Tillgängliga smaker: Vanilj, Choklad, Blåbär</p>
+            <p>Vikt: <select name="size">
+                <option value="1KG">1kg</option>
+            </select></p>
+            <p>Smak:
+                <select name="color">
+                    <option value="Vanilj">Vanilj</option>
+                    <option value="Choklad">Choklad</option>
+                    <option value="Blåbär">Blåbär</option>
+                </select></p>
             <div class="ratings">
                 <span class="star">&#9733;</span>
                 <span class="star">&#9733;</span>
@@ -153,7 +214,7 @@
                 <span class="star">&#9734;</span>
                 <span class="rating-average">(4.0)</span>
             </div>
-            <a href="kundvagn.html" class="buy-button">Köp nu</a>
+            <button class="buy-button" >Köp nu</button>
         </div>
     
         <!-- Andra produkt börjar här -->
@@ -171,15 +232,22 @@
                 <span class="star">&#9734;</span>
                 <span class="rating-average">(4.0)</span>
             </div>
-            <a href=""class="buy-button">Köp nu</a>
+            <button class="buy-button" >Köp nu</button>
         </div>
         <!-- Andra produkt slutar här -->
         <div class="product">
             <h2>Kreatin</h2>
             <img src="images/vit-kosttillskott.png">
             <p>Pris: 179kr</p>
-            <p>Tillgänlig: 500g</p>
-            <p>Tillgängliga smaker: Vanilj, Äppelpaj, Blåbär</p>
+            <p>Vikt: <select name="size">
+                <option value="500 gram">500 gram</option>
+            </select></p>
+            <p>Smak:
+                <select name="color">
+                    <option value="Vanilj">Vanilj</option>
+                    <option value="Mango">Mango</option>
+                    <option value="Ananas">Ananas</option>
+                </select></p>
             <div class="ratings">
                 <span class="star">&#9733;</span>
                 <span class="star">&#9733;</span>
@@ -188,23 +256,28 @@
                 <span class="star">&#9734;</span>
                 <span class="rating-average">(4.0)</span>
             </div>
-            <a href="kundvagn.html" class="buy-button">Köp nu</a>
+            <button class="buy-button" >Köp nu</button>
         </div>
         <div class="product">
             <h2>Pre work out - Pwo</h2>
             <img src="images/pwoburk.png">
             <p>Pris: 299kr</p>
             <p>Tillgängligt: 250g</p>
-            <p>Tillgängliga smaker:Mango, Lime, Jordgubb</p>
+            <p>Smak:
+                <select name="taste">
+                    <option value="Lime">Lime</option>
+                    <option value="Cola">Cola</option>
+                    <option value="Blodapelsin">Blodapelsin</option>
+                </select></p>
             <div class="ratings">
                 <span class="star">&#9733;</span>
                 <span class="star">&#9733;</span>
                 <span class="star">&#9733;</span>
                 <span class="star">&#9733;</span>
-                <span class="star">&#9734;</span>
+                <span class="star">&#9733;</span>
                 <span class="rating-average">(5.0)</span>
             </div>
-            <a href="kundvagn.html" class="buy-button">Köp nu</a>
+            <button class="buy-button" >Köp nu</button>
         </div>
     </div>
         

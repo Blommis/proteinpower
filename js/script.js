@@ -1,24 +1,3 @@
-function buildMenu()
-{ 
-    var links = [
-        ["Hem", "index.html"],
-        ["Produkter", "produkt.html"],
-        ["Aktuell kampanj", "campaign.html"], 
-        ["Om oss", "omoss.html"],
-        ["Kontakta oss", "kontakta.html"],
-    ]
-
-        var content=""
-    for(var i = 0; i < links.length; i++)
-    {
-        var text = links[i][0]
-        var adress = links[i][1]
-        content = content + "<li><a href=\"" + adress + "\">" + text + "</a></li>"
-        // <li><a href="index.html">Startsida</a></li>
-    }
-    document.getElementById("menu").innerHTML = content 
-}
-
 
 let listProductHTML = document.querySelector('.listProduct');
 let listCartHTML = document.querySelector('.listCart');
@@ -49,9 +28,18 @@ document.querySelectorAll('.buy-button').forEach(button => {
         const productName = productElement.querySelector('h2').textContent;
         const productPriceString = productElement.querySelector('p').textContent;
         const productPrice = parseInt(productPriceString.match(/\d+/)[0]); // Extrahera priset från texten
+      
+        // Hämta vald storlek från dropdown-menyn för storlek
+        const selectedSize = productElement.querySelector('select[name="size"]').value;
 
-        // Lägg till produkten i varukorgen
-        addToCart(productName, productPrice);
+        // Hämta vald färg från dropdown-menyn för färg
+        const selectedColor = productElement.querySelector('select[name="color"]').value;
+
+        
+
+
+// Lägg till produkten i varukorgen
+        addToCart(productName, productPrice, selectedSize, selectedColor );
 
         // Uppdatera varukorgen i varukorgsikonen
         updateCartIcon();
@@ -61,9 +49,9 @@ document.querySelectorAll('.buy-button').forEach(button => {
 });
 
 // Funktion för att lägga till produkten i varukorgen
-function addToCart(productName, price) {
+function addToCart(productName, price, size, color) {
     // Lägg till produkten i varukorgen
-    cart.push({ name: productName, price: price });
+    cart.push({ name: productName,  price: price, size: size, color: color});
     
    
 
@@ -95,7 +83,7 @@ function updateCart() {
         const productHTML = document.createElement('div');
         productHTML.classList.add('cart-item');
         productHTML.innerHTML = `
-        <img src="images/images/Herr-tshirt.png${product.image}" alt="${product.name}  ${product.price} kr" >
+        <img src="${product.image}" alt="${product.name} ${product.color} ${product.size} ${product.price} kr " >
         <div class="quantity">
                 <span class="minus"><</span>
                 <span>1</span>
@@ -109,6 +97,25 @@ function updateCart() {
         listCartHTML.appendChild(productHTML);
     });
 }
+// Hämta vald storlek från dropdown-menyn för storlek
+const valdStorlek = productElement.querySelector('.storlek-dropdown').value;
+
+// Hämta vald färg/smak från dropdown-menyn för färg/smak
+const valdFargSmak = productElement.querySelector('.farg-smak-dropdown').value;
+
+var dropdowns = document.querySelectorAll('select');
+
+    // Loopa igenom varje dropdown-menyn
+    dropdowns.forEach(function(dropdown) {
+        // Lägg till en händelselyssnare för när ett alternativ väljs
+        dropdown.addEventListener('change', function() {
+            // Hämta det valda värdet från dropdown-menyn
+            var valtAlternativ = this.value;
+            // Visa det valda alternativet i konsolen (kan användas för att göra andra åtgärder)
+            console.log("Valt alternativ: " + valtAlternativ);
+        });
+    });
+
 
 
 
