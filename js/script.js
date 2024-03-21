@@ -1,121 +1,133 @@
 
-let listProductHTML = document.querySelector('.listProduct');
-let listCartHTML = document.querySelector('.listCart');
-let iconCart = document.querySelector('.icon-cart');
-let iconCartSpan = document.querySelector('.icon-cart span');
-let body = document.querySelector('body');
-let closeCart = document.querySelector('.close');
+
+// Variabler för att hämta DOM-element
+const listProductHTML = document.querySelector('.listProduct');
+const listCartHTML = document.querySelector('.listCart');
+const iconCart = document.querySelector('.icon-cart');
+const iconCartSpan = document.querySelector('.icon-cart span');
+const body = document.querySelector('body');
+const closeCart = document.querySelector('.close');
+const readMoreButtons = document.querySelectorAll('.read-more-button');
+const modalCloseButtons = document.querySelectorAll('.modal-close');
+const dropdowns = document.querySelectorAll('select');
+
+// Produkter och varukorgsarrayer
 let products = [];
 let cart = [];
 
-
-// Lyssna på klickhändelser på varukorgsikonen för att visa varukorgen
-iconCart.addEventListener('click', () => {
+// Funktion för att visa eller dölja varukorgen
+function toggleCart() {
     body.classList.toggle('showCart');
-})
-closeCart.addEventListener('click', () => {
-    body.classList.toggle('showCart');
-})
-
-// Lyssna på klickhändelser på "köp nu"-knapparna för att lägga till produkter i varukorgen
-document.querySelectorAll('.buy-button').forEach(button => {
-    button.addEventListener('click', function(event) {
-        event.preventDefault(); // Förhindra standardbeteendet för länken
-        console.log("Köp-knappen klickad!"); // Lägg till loggning här för att verifiera att klickhändelsen aktiveras
-
-        // Hitta elementen som representerar produkten
-        const productElement = this.closest('.product');
-        const productName = productElement.querySelector('h2').textContent;
-        const productPriceString = productElement.querySelector('p').textContent;
-        const productPrice = parseInt(productPriceString.match(/\d+/)[0]); // Extrahera priset från texten
-      
-        // Hämta vald storlek från dropdown-menyn för storlek
-        const selectedSize = productElement.querySelector('select[name="size"]').value;
-
-        // Hämta vald färg från dropdown-menyn för färg
-        const selectedColor = productElement.querySelector('select[name="color"]').value;
-
-        
-
-
-// Lägg till produkten i varukorgen
-        addToCart(productName, productPrice, selectedSize, selectedColor );
-
-        // Uppdatera varukorgen i varukorgsikonen
-        updateCartIcon();
-
-       
-    });
-});
-
-// Funktion för att lägga till produkten i varukorgen
-function addToCart(productName, price, size, color) {
-    // Lägg till produkten i varukorgen
-    cart.push({ name: productName,  price: price, size: size, color: color});
-    
-   
-
-    // Uppdatera varukorgen på sidan
-    updateCart();
 }
 
-// Funktion för att uppdatera varukorgen på sidan
-function updateCart() {
-    // Implementera uppdateringslogik för varukorgen
+// Funktion för att lägga till produkt i varukorgen
+function addToCart(productName, price, size, color) {
+    cart.push({ name: productName, price: price, size: size, color: color});
+    updateCart();
 }
 
 // Funktion för att uppdatera varukorgen i varukorgsikonen
 function updateCartIcon() {
-    // Uppdatera varukorgen i varukorgsikonen baserat på den aktuella varukorgen (cart)
-    iconCartSpan.textContent = cart.length; // Uppdatera antalet produkter i varukorgen
+    iconCartSpan.textContent = cart.length;
+}
+// Funktion för att ta bort produkt från varukorgen
+function removeFromCart(index) {
+    cart.splice(index, 1);
+    updateCart();
+    updateCartIcon();
 }
 
+// Funktion för att uppdatera antal produkter i varukorgen
+
+
+// Lyssna på klickhändelser för plus och minus knappar samt ta bort knappar
+listCartHTML.addEventListener('click', function(event) {
+    const target = event.target;
+    if (target.classList.contains('remove')) {
+        const index = [...target.parentElement.parentElement.children].indexOf(target.parentElement);
+        removeFromCart(index);
+    } else if (target.classList.contains('minus')) {
+        const quantityElement = target.nextElementSibling;
+        let quantity = parseInt(quantityElement.textContent);
+        if (quantity > 1) {
+            quantity--;
+            quantityElement.textContent = quantity;
+            const index = [...target.parentElement.parentElement.children].indexOf(target.parentElement.parentElement);
+            updateQuantity(index, quantity);
+        }
+    } else if (target.classList.contains('plus')) {
+        const quantityElement = target.previousElementSibling;
+        let quantity = parseInt(quantityElement.textContent);
+        quantity++;
+        quantityElement.textContent = quantity;
+        const index = [...target.parentElement.parentElement.children].indexOf(target.parentElement.parentElement);
+        updateQuantity(index, quantity);
+    }
+});
+function updateQuantity(index, quantity) {
+    cart[index].quantity = quantity;
+}
 
 // Funktion för att uppdatera varukorgen på sidan
 function updateCart() {
-    // Töm listan över produkter i varukorgen
     listCartHTML.innerHTML = '';
-
-
-    // Loopa igenom varje produkt i varukorgen
-    cart.forEach(product => {
-        // Skapa en ny rad i varukorgen för varje produkt
+    cart.forEach((product, index) => {
         const productHTML = document.createElement('div');
         productHTML.classList.add('cart-item');
         productHTML.innerHTML = `
-        <img src="${product.image}" alt="${product.name} ${product.color} ${product.size} ${product.price} kr " >
-        <div class="quantity">
-                <span class="minus"><</span>
+            ${product.name} / ${product.color} / ${product.size} / ${product.price} kr
+            <div class="quantity">
+                <span class="minus">-</span>
                 <span>1</span>
-                <span class="plus">></span>
+                <span class="plus">+</span>
             </div>
             <button class="remove">Ta bort</button>
-
-        `   
-        ;
-        // Lägg till den nya raden i varukorgen
+        `;
         listCartHTML.appendChild(productHTML);
     });
 }
-// Hämta vald storlek från dropdown-menyn för storlek
-const valdStorlek = productElement.querySelector('.storlek-dropdown').value;
 
-// Hämta vald färg/smak från dropdown-menyn för färg/smak
-const valdFargSmak = productElement.querySelector('.farg-smak-dropdown').value;
+// Lyssna på klickhändelser för att visa/dölja varukorgen
+iconCart.addEventListener('click', toggleCart);
+closeCart.addEventListener('click', toggleCart);
 
-var dropdowns = document.querySelectorAll('select');
-
-    // Loopa igenom varje dropdown-menyn
-    dropdowns.forEach(function(dropdown) {
-        // Lägg till en händelselyssnare för när ett alternativ väljs
-        dropdown.addEventListener('change', function() {
-            // Hämta det valda värdet från dropdown-menyn
-            var valtAlternativ = this.value;
-            // Visa det valda alternativet i konsolen (kan användas för att göra andra åtgärder)
-            console.log("Valt alternativ: " + valtAlternativ);
-        });
+// Lyssna på klickhändelser för "köp nu"-knappar
+document.querySelectorAll('.buy-button').forEach(button => {
+    button.addEventListener('click', function(event) {
+        event.preventDefault();
+        const productElement = this.closest('.product');
+        const productName = productElement.querySelector('h2').textContent;
+        const productPriceString = productElement.querySelector('p').textContent;
+        const productPrice = parseInt(productPriceString.match(/\d+/)[0]);
+        const selectedSize = productElement.querySelector('select[name="size"]').value;
+        const selectedColor = productElement.querySelector('select[name="color"]').value;
+        addToCart(productName, productPrice, selectedSize, selectedColor);
+        updateCartIcon();
+        toggleCart(); 
     });
+});
 
+// Lyssna på klickhändelser för dropdown-menyer
+dropdowns.forEach(dropdown => {
+    dropdown.addEventListener('change', function() {
+        const selectedValue = this.value;
+        console.log("Valt alternativ: " + selectedValue);
+    });
+});
+
+// Lyssna på klickhändelser för "Läs mer"-knappar
+readMoreButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        button.nextElementSibling.style.display = 'block';
+    });
+});
+
+// Lyssna på klickhändelser för "X"-knappar i modalerna
+modalCloseButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        button.parentElement.parentElement.style.display = 'none';
+    });
+});
 
 
 

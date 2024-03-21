@@ -42,10 +42,13 @@ header{
 .title{
     font-size: xx-large;
 }
-.listProduct .item img{
-    width: 9%;
-    filter: drop-shadow(0 50px 20px #0009);
+.listCart .item img {
+    max-width: 100%;
+    max-height: 100px;
+    margin-right: 10px; /* Anpassa marginaler efter behov */
+    padding: 5px; /* Lägg till padding för visuellt utrymme */
 }
+
 .listProduct{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -122,9 +125,6 @@ body.showCart .container{
     background-color: red;
 }
 
-.listCart .item img{
-    width: 100%;
-}
 .listCart .item{
     display: grid;
     grid-template-columns: 70px 150px 50px 1fr;
@@ -134,21 +134,26 @@ body.showCart .container{
     color: black;
 }
 .listCart .quantity span{
-    display: inline-block;
-    width: 25px;
-    height: 25px;
+    display: inline-flex;
+    justify-content: center; /* Centrera horisontellt */
+    align-items: center; /* Centrera vertikalt */
+    width: 20px;
+    height: 20px;
     background-color: #eee;
     border-radius: 50%;
     color: black;
     cursor: pointer;
+    
 }
 .listCart .quantity span:nth-child(2){
     background-color: transparent;
     color: black;
     cursor: auto;
+   
 }
 .listCart .item:nth-child(even){
-    background-color: black
+    background-color:black
+    
 }
 .listCart{
     overflow: auto;

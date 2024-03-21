@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="css/kundvagn.css">
     <link rel="stylesheet" href="css/produktsida.css">
 </head>
-    <body class="showcart">
+    <body class="">
         <header>
             <div class="top-section">
             <div class="logo">ProteinPower.se</div>
@@ -86,34 +86,72 @@
             <button class="checkOut">Till kassan</button>
         </div>
         </div>
-    <div class="products-container" class="listcart">
-        <div class="product" class="item">
-            
-            <h2>T-shirt - Herr</h2>
-            <img src="images/Herr-tshirt.png">
-            <p>Pris: 299kr</p>
-            <p>Tillgängliga storlekar: S, M, L</p>
-            <p>Tillgängliga färger: Svart, Röd, Blå</p>
-            <div class="ratings">
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9734;</span>
-                <span class="rating-average">(4.0)</span>
+        <div class="products-container" class="listcart">
+            <div class="product">
+                <h2>T-shirt - Herr</h2>
+                <img src="images/Herr-tshirt.png">
+                <p>Pris: 299kr</p>
+                <p>Storlek: 
+                    <select name="size">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                    </select>
+                </p>
+                <p>Färg:
+                    <select name="color">
+                        <option value="Svart">Svart</option>
+                        <option value="Röd">Röd</option>
+                        <option value="Blå">Blå</option>
+                    </select>
+                </p>
+                <div class="ratings">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9734;</span>
+                    <span class="rating-average">(4.0)</span>
+                </div>
+                <button class="buy-button" >Köp nu</button>
+                <button class="read-more-button">Läs mer</button>
+                <div class="modal">
+                    <div class="modal-content">
+                        <span class="modal-close">&times;</span>
+                        <h2>T-shirt - Herr</h2>
+                        <img src="images/Herr-tshirt.png">
+                        <h3>Pris: 299kr</h3>
+                        <h3>Produktbeskrivning:</h3> 
+                         En mångsidig träningströja för herr som kombinerar <br> stil med prestanda,perfekt för både gym och utomhusaktiviteter.
+                           <p>   - Tillverkad av högkvalitativt andningsbart material för maximal komfort.
+                            <br> - Ergonomiskt designad med stretchigt tyg för ökad rörelsefrihet.
+                            <br> - Snabbtorkande egenskaper håller dig torr och bekväm under träningen.
+                            <br> - Reflekterande detaljer för ökad synlighet och säkerhet vid löpning eller träning utomhus.</p>
+                        <h3>Material: Bomull</h3> 
+                    </div>
+                </div>
             </div>
-            <button class="buy-button"> Köp nu</button>
-            </div>
-        
-        
-        
+
+    
         <!-- Andra produkt börjar här -->
         <div class="product">
             <h2>T-shirt - Dam</h2>
             <img src="images/Dam_tshirt.png">
             <p>Pris: 299kr</p>
-            <p>Tillgängliga storlekar: XS, S, M</p>
-            <p>Tillgängliga färger: Vit, Svart, Blå</p>
+            <p>Storlek: 
+                <select name="size">
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                </select>
+            </p>
+            <p>Färg:
+                <select name="color">
+                    <option value="Svart">Svart</option>
+                    <option value="Röd">Röd</option>
+                    <option value="Blå">Blå</option>
+                </select>
+            </p>
             <div class="ratings">
                 <span class="star">&#9733;</span>
                 <span class="star">&#9733;</span>
@@ -122,15 +160,39 @@
                 <span class="star">&#9734;</span>
                 <span class="rating-average">(4.0)</span>
             </div>
-            <a href="icon-cart" class="buy-button">Köp nu</a>
+            <button  class="buy-button" >Köp nu</button>
+            <button class="read-more-button">Läs mer</button>
+                <div class="modal">
+                    <div class="modal-content">
+                        <span class="modal-close">&times;</span>
+                        <h2>T-shirt - Dam</h2>
+                        <img src="images/Dam_tshirt.png">
+                        <h3>Pris: 299kr</h3>
+                        <h3>Produktbeskrivning:</h3>
+                             En mångsidig kortärmad träningströja för dam som kombinerar <br> stil med prestanda,perfekt för både gym och utomhusaktiviteter.
+                            <p>   - Tillverkad av högkvalitativt andningsbart material för maximal komfort.
+                             <br> - Ergonomiskt designad med stretchigt tyg för ökad rörelsefrihet.
+                             <br> - Snabbtorkande egenskaper håller dig torr och bekväm under träningen.
+                             <br> - Reflekterande detaljer för ökad synlighet och säkerhet vid löpning eller träning utomhus.</p>
+                            
+                        <h3>Material: Bomull</h3>
+                    </div>
+                </div>
         </div>
         <!-- Andra produkt slutar här -->
         <div class="product">
-            <h2>Whey 100 - Proteinpulver</h2>
+            <h2>Proteinpulver</h2>
             <img src="images/produkt-proteinpulver.png">
             <p>Pris: 199kr</p>
-            <p>Tillgänlig: 1kg</p>
-            <p>Tillgängliga smaker: Vanilj, Choklad, Blåbär</p>
+            <p>Vikt: <select name="size">
+                <option value="1KG">1kg</option>
+            </select></p>
+            <p>Smak:
+                <select name="color">
+                    <option value="Vanilj">Vanilj</option>
+                    <option value="Choklad">Choklad</option>
+                    <option value="Blåbär">Blåbär</option>
+                </select></p>
             <div class="ratings">
                 <span class="star">&#9733;</span>
                 <span class="star">&#9733;</span>
@@ -139,14 +201,35 @@
                 <span class="star">&#9734;</span>
                 <span class="rating-average">(4.0)</span>
             </div>
-            <a href="kundvagn.html" class="buy-button">Köp nu</a>
+            <button class="buy-button" >Köp nu</button>
+            <button class="read-more-button">Läs mer</button>
+                <div class="modal">
+                    <div class="modal-content">
+                        <span class="modal-close">&times;</span>
+                        <h2>Proteinpulver</h2>
+                        <img src="images/produkt-proteinpulver.png">
+                        <p>Pris: 199kr</p>
+                        <p>Beskrivning: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget lorem eu sem tincidunt dictum. Nulla facilisi.</p>
+                       
+                    </div>
+                </div>
+        
         </div>
         <div class="product">
-            <h2>Jacka - Muscle fit - Herr</h2>
+            <h2>Jacka - Herr</h2>
             <img src="images/Herr_jacka.png">
             <p>Pris: 499kr</p>
-            <p>Tillgängliga storlekar: M, L, XL, XLL</p>
-            <p>Tillgängliga färger:Svart, Blå</p>
+            <p>Storlek: <select name="size">
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+            </select></p>
+            <p>Färg:
+                <select name="color">
+                    <option value="Svart">Svart</option>
+                    <option value="Röd">Röd</option>
+                    <option value="Blå">Blå</option>
+                </select></p>
             <div class="ratings">
                 <span class="star">&#9733;</span>
                 <span class="star">&#9733;</span>
@@ -155,7 +238,22 @@
                 <span class="star">&#9733;</span>
                 <span class="rating-average">(5.0)</span>
             </div>
-            <a href="kundvagn.html" class="buy-button">Köp nu</a>
+            <button class="buy-button" >Köp nu</button>
+            <button class="read-more-button">Läs mer</button>
+                <div class="modal">
+                    <div class="modal-content">
+                        <span class="modal-close">&times;</span>
+                        <h2>Jacka - Herr</h2>
+                        <img src="images/Herr_jacka.png">
+                        <p>Pris: 499kr</p>
+                        <h3>Produktbeskrivning:</h3> En mångsidig långärmad träningströja för herr som kombinerar <br> stil med prestanda,perfekt för både gym och utomhusaktiviteter.
+                        <p>   - Tillverkad av högkvalitativt andningsbart material för maximal komfort.
+                         <br> - Ergonomiskt designad med stretchigt tyg för ökad rörelsefrihet.
+                         <br> - Snabbtorkande egenskaper håller dig torr och bekväm under träningen.
+                         <br> - Reflekterande detaljer för ökad synlighet och säkerhet vid löpning eller träning utomhus.</p>
+                     <h3>Material: 100 % polyester</h3>
+                    </div>
+                </div>
         </div>
     </div>
     <br>
@@ -215,6 +313,7 @@
             <href="#"><img src="images/Namnlös design (32).png" alt="Facebook"></a>
         </div>
     </footer>
-    <script> src="js/script.js"</script>
+    <script src="js/script.js"></script>
+
 </body>
 </html>

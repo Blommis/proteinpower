@@ -2,6 +2,7 @@
     background-image: url("../images/omosshero.png");
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     color: white;
     text-align: center;
     padding: 30px; 
@@ -10,11 +11,11 @@
    
 }
 .vårhistoria{
-    background-image: url("../images/Vår\ historia\ \(14\).png");
+    background-image: url("../images/bakgrundomoss.png");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    color:black;
+    color:white;
     padding: 200px;
     padding-left: 30px;
     padding-top: 170px;
