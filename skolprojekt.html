@@ -70,28 +70,106 @@
         </header>
     </div>
 
-    <header class="skolprojektheader"></header>
+    <header class="skolprojektheader">
         <h1>Välkommen till mina skolprojekt</h1>
-        <p> bröd textbröd textbröd textbröd textbröd textbröd textbröd textbröd textbröd text.</p>
+        <p>bröd textbröd textbröd textbröd textbröd textbröd textbröd textbröd textbröd text.</p>
+        <br>
         <button onclick="scrollToSection()">Läs mer</button>
     </header>
+    
+    <div id="more-info">
+        
+    <div class="carousel-container-wrapper">
+         <div class="text-container">
+            <h2>Content marketing</h2>
+            <p>Under min kurs i content marketing skapade jag innehåll som fokuserade på att väcka medvetenhet och engagemang
+                i de tidiga stegen av köpresan. Målet var att skapa ett intresse och ge relevant information som kunde hjälpa målgruppen 
+                att fatta beslut längre fram i processen. För detta syfte använde jag Instagram-karusellinlägg som på ett visuellt tilltalande 
+                sätt presenterade tips och användbar information. At ställa en öppen fråga i bildtexten uppmuntrade jag till interaktion, 
+                vilket ökade engagemanget och stärkte relationen med målgruppen. <br>
+               Jag använde också e-postutskick (slide 6 och 7) för att fortsätta engagera målgruppen med relevant innehåll. Genom att erbjuda en användbar reseguide i 
+               nyhetsbrevet kunde jag visa på företagets expertis och hjälpa målgruppen att planera sin resa, samtidigt som jag skapar en positiv relation
+                till varumärket. Genom att inte fokusera på försäljning och istället erbjuda värdefullt innehåll som underlättade för mottagarna, bidrog nyhetsbrevet till 
+                att bygga långsiktiga relationer och fortsätta driva målgruppen vidare på köpresans väg mot ett beslut.</p>
+        </div> 
+        <div class="carousel-container">
+            <input type="radio" name="carousel" id="carousel-img1" checked>
+            <input type="radio" name="carousel" id="carousel-img2">
+            <input type="radio" name="carousel" id="carousel-img3">
+            <input type="radio" name="carousel" id="carousel-img4">
+            <input type="radio" name="carousel" id="carousel-img5">
+            <input type="radio" name="carousel" id="carousel-img6">
+            <input type="radio" name="carousel" id="carousel-img7">
+        
+            <div class="carousel-track">
+                <div class="carousel-img-container">
+                    <img src="images/CMbild1.png" alt="Projekt 1">
+                </div>
+                <div class="carousel-img-container">
+                    <img src="images/CMBILD2.png" alt="Projekt 2">
+                </div>
+                <div class="carousel-img-container">
+                    <img src="images/CMBILD3.png" alt="Projekt 3">
+                </div>
+                <div class="carousel-img-container">
+                    <img src="images/CMbild4.png" alt="Projekt 4">
+                </div>
+                <div class="carousel-img-container">
+                    <img src="images/CMBILD5.png" alt="Projekt 5">
+                </div>
+                <div class="carousel-img-container">
+                    <img src="images/CMbild6.png" alt="Projekt 6">
+                </div>
+                <div class="carousel-img-container">
+                    <img src="images/CMBILD7.png" alt="Projekt 7">
+                </div>
+            </div>
+        
+            <div class="carousel-navigation">
+                <label for="carousel-img1" class="carousel-nav-btn"></label>
+                <label for="carousel-img2" class="carousel-nav-btn"></label>
+                <label for="carousel-img3" class="carousel-nav-btn"></label>
+                <label for="carousel-img4" class="carousel-nav-btn"></label>
+                <label for="carousel-img5" class="carousel-nav-btn"></label>
+                <label for="carousel-img6" class="carousel-nav-btn"></label>
+                <label for="carousel-img7" class="carousel-nav-btn"></label>
+            </div>
+        </div>
+    </div>
+    </div>
 
-    <section id="more-info"></section>
-        <h2>Mer information</h2>
-        <p>
-            Här kan du läsa mer om projektet och dess olika delar. Vi fokuserar på
-            att använda HTML och CSS för att bygga en snygg och användarvänlig layout.
-            Knappen "Läs mer" hjälper användaren att navigera till denna sektion.
+    <div class="wrapper">
+        <!-- Bildcontainer -->
+        <div class="image-container">
+            <img src="images/Google ads.png" alt="Google Ads" class="image-style">
+            <img src="images/google analytics.png" alt="Google Analytics" class="image-style">
+        </div>
+    <div class="text-container2">
+        <h2 class="semhead">SEM och webbstatistik</h2>
+        <p class="semtext">
+            Syftet med kursen SEM och webbstatistik var att ge mig en djupare förståelse 
+            för hur sökmotorer fungerar och hur man använder betald annonsering (SEA) och 
+            organiskt sök (SEO) för att öka synligheten på nätet. Kursen fokuserade på att läras 
+            sig optimera webbplatser och annonsering för att maximera trafik och konverteringar. 
+            Jag fick också insikter i Google analytics hur webbstatistik kan användas för att mäta och analysera kampanjens resultat, 
+            vilket gör det möjligt att optimera marknadsföringsstrategier. Genom att tillämpa SEM och analysera data 
+            via webbstatistik kunde jag förstå hur man använder sökordsstrategier, målgruppsanpassad annonsering och 
+            mätvärden som klickfrekvens (CTR), konverteringsfrekvens och ROI för att förbättra resultatet av digital marknadsföring. 
+            Kursen gav också praktiska verktyg för att hantera kampanjer i plattformar som Google Ads och använda data för att optimera 
+            annonser och marknadsföring.
         </p>
-    </section>
-
+    </div>
+    
+    </div>
+    
+      
     <script>
         // Funktion för att scrolla ner till sektionen
         function scrollToSection() {
             document.getElementById('more-info').scrollIntoView({ behavior: 'smooth' });
         }
     </script>
-
+    
 
 
 

@@ -11,6 +11,7 @@ const readMoreButtons = document.querySelectorAll('.read-more-button');
 const modalCloseButtons = document.querySelectorAll('.modal-close');
 const dropdowns = document.querySelectorAll('select');
 
+
 // Produkter och varukorgsarrayer
 let products = [];
 let cart = [];
@@ -129,15 +130,40 @@ modalCloseButtons.forEach(button => {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.carousel-btn next-btn');
+    const track = document.querySelector('.carousel-track');
+    const images = document.querySelectorAll('.carousel-img');
 
+    let currentIndex = 0;
+    let imageWidth = images[0].clientWidth;
 
+    // Vänta på att bilderna är helt laddade innan vi kör karusellen
+    window.addEventListener('load', () => {
+        imageWidth = images[0].clientWidth;
+        moveCarousel(); // Flytta karusellen till rätt bild efter att bilderna har laddats
+    });
 
+    function moveCarousel() {
+        track.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
+    }
 
+    prevBtn.addEventListener('click', function() {
+        if (currentIndex > 0) {
+            currentIndex--;
+        } else {
+            currentIndex = images.length - 1;
+        }
+        moveCarousel();
+    });
 
-
-
-
-
-
-
-
+    nextBtn.addEventListener('click', function() {
+        if (currentIndex < images.length - 1) {
+            currentIndex++;
+        } else {
+            currentIndex = 0;
+        }
+        moveCarousel();
+    });
+});

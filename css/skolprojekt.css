@@ -6,54 +6,219 @@ body {
     line-height: 1.6;
 }
 
-/* Header-stil */
-.main-header {
-    background-color: #282828;
-    color: #fff;
-    text-align: center;
-    padding: 50px 20px;
+
+/* Header */
+  .skolprojektheader {
+        background-image: url("../images/Skolprojekthead.png");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        text-align: center;
+        padding: 150px; 
 }
 
-.main-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-.main-header p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
-.main-header button {
-    background-color: #ff9800;
-    color: #fff;
-    border: none;
+.skolprojektheader button {
     padding: 10px 20px;
-    font-size: 1rem;
+    background-color: rgb(18, 38, 58);
+    color: white;
+    text-decoration: none;
     border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
+    font-size: 1.5rem;
 }
 
-.main-header button:hover {
-    background-color: #e68a00;
+.skolprojektheader button:hover {
+    background-color: lightblue;
 }
 
-/* Sektionen för mer information */
-#more-info {
+#more-info{
     padding: 40px 20px;
     background-color: #f4f4f4;
-    text-align: center;
 }
 
-#more-info h2 {
+#more-info h2{
     font-size: 2rem;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 #more-info p {
     font-size: 1rem;
     color: #333;
-    max-width: 600px;
+    max-width: 800px;
+    margin-left: 50px;
+    text-align: center;
+}
+
+/* Wrapper för att hantera layouten */
+.carousel-container-wrapper {
+    display: flex;
+    align-items: center; /* Vertikalt centrera innehåll */
+    justify-content: space-between; /* Skapa utrymme mellan text och karusell */
+    gap: 20px; /* Avstånd mellan text och karusell */
+    padding: 20px;
+}
+
+/* Textcontainer */
+.text-container {
+    flex: 1;
+    max-width: 45%; /* Maxbredd för texten */
+}
+
+/* Stilar för karusellen */
+.carousel-container {
+    position: relative;
+    width: 30%;
+    max-width: 300px;
+    overflow: hidden;
     margin: 0 auto;
 }
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-img-container {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.carousel-img-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Dölj radio-knapparna */
+input[type="radio"] {
+    display: none;
+}
+
+/* Navigeringsknappar */
+.carousel-navigation {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.carousel-nav-btn {
+    width: 8px;
+    height: 8px;
+    margin: 0 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Anpassa karusellen beroende på vilken bild som är vald */
+input#carousel-img1:checked ~ .carousel-track {
+    transform: translateX(0);
+}
+
+input#carousel-img2:checked ~ .carousel-track {
+    transform: translateX(-100%);
+}
+
+input#carousel-img3:checked ~ .carousel-track {
+    transform: translateX(-200%);
+}
+
+input#carousel-img4:checked ~ .carousel-track {
+    transform: translateX(-300%);
+}
+
+input#carousel-img5:checked ~ .carousel-track {
+    transform: translateX(-400%);
+}
+
+input#carousel-img6:checked ~ .carousel-track {
+    transform: translateX(-500%);
+}
+
+input#carousel-img7:checked ~ .carousel-track {
+    transform: translateX(-600%);
+}
+
+/* Ändra bakgrundsfärgen på de valda navigeringsknapparna */
+input#carousel-img1:checked ~ .carousel-navigation label:nth-of-type(1),
+input#carousel-img2:checked ~ .carousel-navigation label:nth-of-type(2),
+input#carousel-img3:checked ~ .carousel-navigation label:nth-of-type(3),
+input#carousel-img4:checked ~ .carousel-navigation label:nth-of-type(4),
+input#carousel-img5:checked ~ .carousel-navigation label:nth-of-type(5),
+input#carousel-img6:checked ~ .carousel-navigation label:nth-of-type(6),
+input#carousel-img7:checked ~ .carousel-navigation label:nth-of-type(7) {
+    background-color: #282828;
+}
+
+/* Wrapper för att placera texten till höger */
+/* Wrapper för att placera texten på höger sida och centrera texten inom containern */
+.text-container2 {
+    display: flex;
+    flex-direction: column; /* Texten går vertikalt */
+    justify-content: flex-start; /* Placera innehållet högst upp */
+    align-items: flex-end; /* Placera innehållet till höger */
+    padding: 20px;
+    width: 60%; /* Ge containern en bredd */
+    margin-left: auto; /* Centrerar till höger */
+    max-width: 45%; /* Maxbredd för texten */
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between; /* Sprid innehållet */
+    align-items: center; /* Centrera innehåll vertikalt */
+    margin: 20px 0; /* Utrymme runt hela sektionen */
+    gap: 20px; /* Mellanrum mellan bilder och text */
+    min-height: 400px; /* Ge wrappern tillräcklig höjd för att centrera */
+}
+
+/* Bildcontainer */
+.image-container {
+    display: flex;
+    flex-direction: column; /* Lägg bilderna ovanpå varandra */
+    gap: 20px; /* Mellanrum mellan bilderna */
+    width: 30%; /* Bredd på bildsektionen */
+    justify-content: center; /* Centrera bilderna vertikalt */
+    align-items: center; /* Centrera horisontellt */
+    margin-top: 20px; /* Flytta bilderna lite längre ner */
+    margin-left: 150px;
+}
+
+
+/* Bilder */
+.image-style {
+    width: 100%; /* Bilder fyller bildcontainerns bredd */
+    height: auto; /* Behåll proportioner */
+    border-radius: 8px; /* Runda hörn för bilder */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Snygg skugga */
+}
+
+
+/* Textcontainer */
+.text-container2 {
+    display: flex;
+    flex-direction: column; /* Texten går vertikalt */
+    justify-content: flex-start; /* Placera text högst upp */
+    width: 60%; /* Textsektionens bredd */
+}
+/* Rubrikstil */
+.semhead {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-right: 110px;
+    text-align: center; /* Centrera rubriken */
+    margin-bottom: 10px;
+}
+
+/* Brödtextstil */
+.semtext {
+    font-size: 1rem;
+    color: #333;
+    text-align: center; /* Centrera texten */
+    max-width: 800px;
+    margin-right: 50px; /* Ta bort vänster marginal */
+}
+
