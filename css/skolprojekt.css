@@ -1,0 +1,59 @@
+/* Grundinställningar */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Header-stil */
+.main-header {
+    background-color: #282828;
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.main-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.main-header p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.main-header button {
+    background-color: #ff9800;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.main-header button:hover {
+    background-color: #e68a00;
+}
+
+/* Sektionen för mer information */
+#more-info {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+#more-info h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+#more-info p {
+    font-size: 1rem;
+    color: #333;
+    max-width: 600px;
+    margin: 0 auto;
+}
