@@ -64,6 +64,8 @@ header {
 }
 
 .menu button {
+    position: relative;
+    left: 100px;
     padding: 10px;
     margin-right: 15px;
     margin-top: 15px;
@@ -74,9 +76,31 @@ header {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin-right: 5px;
 }
+
+#skolprojektButton {
+    position: relative; 
+    left: 250px;/* Öka värdet för att flytta den längre åt höger */
+    background-color: rgb(18, 38, 58); /* Sätt bakgrundsfärg */
+    color: white; /* Ändra textfärgen */
+    border: 1px solid rgb(33, 71, 109);
+}
+#skolprojektButton:hover {
+    background-color: #3be602; /* Ändra färgen vid hovring */
+    color: #fffbee; /* Justera textfärgen vid hovring */
+}
+#skolprojektButton a {
+    text-decoration: none; /* Ta bort understrykning */
+    color: white /* Ärva färgen från knappen */
+
+}
+
+#skolprojektButton:hover a {
+    color: white; /* Ändra textfärgen vid hovring */
+}
 .menu button:hover{
     background-color: lightblue;
 }
+
 
 .submenu {
     position: relative;

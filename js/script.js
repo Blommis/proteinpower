@@ -167,3 +167,14 @@ document.addEventListener('DOMContentLoaded', function() {
         moveCarousel();
     });
 });
+
+
+// Funktion för att scrolla till sektionen "more-info"
+function scrollToMoreInfo() {
+    document.getElementById('more-info').scrollIntoView({ behavior: 'smooth' });
+}
+
+// Funktion för att scrolla till sektionen "minaerfarenheter"
+function scrollToMinaErfarenheter() {
+    document.getElementById('minaerfarenheter').scrollIntoView({ behavior: 'smooth' });
+}
