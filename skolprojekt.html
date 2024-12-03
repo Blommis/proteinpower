@@ -85,6 +85,7 @@
         <div class="button-container">
             <button onclick="scrollToMoreInfo()">Till mina arbeten</button>
             <button onclick="scrollToMinaErfarenheter()">Mina erfarenheter</button>
+            <button onclick="scrollToommig()">Om mig</button>
         </div>
     </header>
     
@@ -264,28 +265,66 @@
         </section>
     </div>
     
-    <center><div class="about-container">
+    
+   <div id="om-mig">
+<div class="timeline-container">
+   <center> <div class="about-container">
+        <div class="image-section">
+            <img src="images/karlblomquistportfoliobild.png" alt="Bild på Karl Blomquist">
+        </div>
         <div class="text-section">
-            <h1>Mer om mig</h1>
-            <p><strong>Namn:</strong> Karl Blomquist</p>
+            <h1>Karl Blomquist</h1>
             <p><strong>Född:</strong> 11 juni 1999</p>
             <p><strong>Mina intressen:</strong> Träna, Manchester United och att koda!</p>
             <p>
                 Mitt namn är Karl och är en 25-årig värmlänning som pluggar digital marknadsföring i Stockholm.
-                 I december tar jag examen, och kan knappt vänta på att få dyka in i arbetslivet inom marknadsföring 
-                 och webb. Jag trivs bäst när jag får träffa människor, skapa 
-                 härlig stämning och utmana mig själv. Med hög arbetsmoral och en nyfiken inställning lär jag mig snabbt och
-                  älskar att bygga värdefulla relationer. På fritiden hittar du mig ofta på gymmet, hängandes med familj och 
-                  vänner eller hett engagerad i Manchester Uniteds matcher – min stora passion utanför jobbet!
+                 I slutet december tar jag examen, och kan knappt vänta på att få dyka in i arbetslivet inom marknadsföring 
+                 och webb. Att utmana mig själv och lära mig nya saker är något som alltid har varit 
+                 viktigt för mig, och jag har alltid strävat efter att ta mig utanför min comfort zone. Jag tror på att skapa en 
+                 balans mellan arbete och fritid, och att spendera tid med nära och kära är viktigt för mig. Du hittar även mig på 
+                 gymmet och mycket engagerad i Manchester Uniteds matcher – min stora passion utanför jobbet!
             </p>
-        </div>
-        <div class="image-section">
-            <img src="images/karlblomquistportfoliobild.png" alt="Bild på Karl Blomquist">
         </div>
     </div>
 </center>
-    
-      
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="content">
+                <h3>Studierna börjar | Januari 2023</h3>
+                <p>Började studera digital marknadsföring på Sälj & Marknadshögskolan i Stockholm.</p>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="content">
+                <h3>Första LIA | Oktober-December 2023</h3>
+                <p>Hösten 2023 valde jag att ta steget utomlands för min första praktikplats via Erasmus i Köpenhamn. 
+                    Där praktiserade jag på en marknadsföringsbyrå med fokus på influencer marketing. Det var en otroligt givande tid
+                     där jag fick en bred erfarenhet och lärde mig mycket om hur marknadsföring fungerar i ett annat land än Sverige. 
+                     Jag hade som uppgift att etablera danskarnas plattform på svenska marknaden och hade full kontroll och 
+                     eget ansvar över hur jag skulle gå tillväga för att lyckas. Att praktisera utomlands gav mig en unik inblick 
+                     i olika arbetsmetoder och kulturella skillnader, vilket har stärkt min förmåga att anpassa mig till nya miljöer och situationer.
+                      Det gav mig också möjligheten att arbeta med människor från olika bakgrunder och lära mig att kommunicera effektivt på två olika språk.
+   </p>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="content">
+                <h3>Andra LIA | September-December 2024</h3>
+                <p>Ett år senare och jag är tillbaka i Sverige till min hemort, Karlstad. Idag praktiserar jag på 
+                    ett rekryteringsföretag vid namn Procruitment. Där sitter jag på marknadsavdelningen och hjälper med deras marknadsföringsstrategier.
+                     Där arbetar jag med att utveckla både en karriärsida och intranät. Jag jobbar både i CMS samt med HTML och CSS, och har även hand om 
+                     verktyg som Keyword Planner och Google Analytics. </p>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="content">
+                <h3>Examen | Januari 2025</h3>
+                <p> Klar med mina studier och ser fram emot arbetslivet!</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div> 
     <script>
         // Funktion för att scrolla ner till sektionen
         function scrollToSection() {
@@ -294,6 +333,9 @@
           // Funktion för att scrolla ner till sektionen
      function scrollToSection() {
         document.getElementById('minaerfarenheter').scrollIntoView({ behavior: 'smooth' });
+    }
+    function scrollToSection() {
+        document.getElementById('om-mig').scrollIntoView({ behavior: 'smooth' });
     }
     </script>
 >

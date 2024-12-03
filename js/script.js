@@ -178,3 +178,6 @@ function scrollToMoreInfo() {
 function scrollToMinaErfarenheter() {
     document.getElementById('minaerfarenheter').scrollIntoView({ behavior: 'smooth' });
 }
+function scrollToommig() {
+    document.getElementById('om-mig').scrollIntoView({ behavior: 'smooth' });
+}
