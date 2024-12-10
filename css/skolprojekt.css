@@ -80,6 +80,54 @@ body {
     transform: scale(1.05); /* Liten förstoring vid hover */
 }
 
+@media only screen and (max-width: 768px) {
+    /* Anpassa bakgrundsbilden för mobila enheter */
+    .skolprojektheader {
+        background-image: url("../images/Skolprojekthead.png");
+        background-size: cover;
+        padding: 60px 20px; /* Minska padding för mobil */
+        align-items: center; /* Centra innehåll för mobiler */
+    }
+
+    /* Justera rubriker för mobiler */
+    .skolprojektheader h1 {
+        font-size: 20px; /* Minska storleken på rubriken */
+        margin-left: 0;
+        position: relative;
+        bottom: 50px;
+    }
+
+    /* Justera textstorlek för brödtext för att passa på små skärmar */
+    .skolprojektheader p {
+        font-size: 10px;
+        margin-left: 0;
+        text-align: left; /* Centrera texten på små skärmar */
+        max-width: 70%;
+    }
+
+    .skolprojektheader p1 {
+        font-size: 15px;
+        top: 50px;
+        left: 0;
+        text-align: center; /* Centrera texten */
+    }
+
+    .skolprojektheader .button-container {
+        flex-direction: column; /* Lägg knapparna vertikalt på små skärmar */
+        margin-left: 0;
+        gap: 10px; /* Minska avståndet mellan knapparna */
+        bottom: 20px; /* Minska bottenavstånd */
+    }
+
+    .skolprojektheader button {
+        width: 100%; /* Gör knapparna 80% breda */
+        padding: 8px 16px; /* Minska padding för att göra knapparna mindre */
+        font-size: 0.9rem; /* Justera textstorlek för att passa bättre på mobil */
+        margin: 0 auto; /* Centrerar knapparna */
+    }
+}
+
+    
 
 #more-info{
     padding: 40px 20px;
@@ -203,6 +251,71 @@ input#carousel-img6:checked ~ .carousel-navigation label:nth-of-type(6),
 input#carousel-img7:checked ~ .carousel-navigation label:nth-of-type(7) {
     background-color: #282828;
 }
+@media screen and (max-width: 768px) {
+    /* Anpassa layouten för mobilvy */
+    .carousel-container-wrapper {
+        flex-direction: column; /* Lägg elementen vertikalt */
+        align-items: center; /* Centrera innehållet */
+        gap: 20px; /* Skapa avstånd mellan elementen */
+    }
+
+    /* Textcontainer */
+    .text-container {
+         /* Gör texten bredare men med marginaler */
+        text-align: justify; /* Gör texten lättare att läsa */
+        padding: 0 5%; /* Marginaler för balans */
+    }
+
+    #more-info h2 {
+        font-size: 1.5rem; /* Anpassa rubrikens storlek */
+        margin-bottom: 10px;
+        text-align: center; /* Centrera rubriken */
+    }
+
+    #more-info p {
+        font-size: 1rem; /* Gör texten läsbar */
+        line-height: 1.5; /* Öka radavståndet för läsbarhet */
+        margin-bottom: 20px;
+        text-align: center;
+        width: auto; /* För bättre textblock */
+    }
+
+    /* Karusellen */
+    .carousel-container {
+        width: 80%; /* Gör karusellen mindre än full bredd */
+        max-width: 300px; /* Begränsa bredden */
+    }
+
+    .carousel-img-container img {
+        width: 100%; /* Bilden fyller hela karusellens bredd */
+        height: auto; /* Behåll proportionerna */
+    }
+
+    .carousel-navigation {
+        bottom: 5px; /* Flytta navigeringsknapparna närmare karusellen */
+    }
+}
+@media screen and (max-width: 768px) {
+    /* Textcontainer */
+    .text-container {
+        max-width: 100%; /* Låt texten ta hela bredden */
+        padding: 0 10px; /* Marginaler runt texten */
+        text-align: justify;
+    }
+
+    #more-info h2 {
+        font-size: 1.2rem; /* Minska rubrikstorleken */
+        margin-bottom: 10px;
+        text-align: center; /* Centrera rubriken */
+    }
+
+    #more-info p {
+        font-size: 0.9rem; /* Gör texten mindre */
+        line-height: 1.4; /* Justera radavståndet */
+        margin-bottom: 15px; /* Mindre marginal för att spara utrymme */
+    }
+}
+
 
 /* Wrapper för att placera texten till höger */
 /* Wrapper för att placera texten på höger sida och centrera texten inom containern */
@@ -395,6 +508,7 @@ h2 {
     justify-content: center; /* Justera positioneringen */
     gap: 15px; /* Minska mellanrum mellan rutorna */
     margin-top: 20px;
+    text-align: left;
 }
 
 /* Kurskort */
@@ -512,7 +626,9 @@ p2.course-description {
     .image-section img {
         max-width: 80%;
     }
+
 }
+
 
 .image-section {
     flex: 1;
@@ -545,6 +661,7 @@ p2.course-description {
 
 /* Tidslinjestil */
 .timeline {
+    background-color: rgb(227, 236, 244);
     position: relative;
     left: 220px;
     margin: 50px 20px;
@@ -643,4 +760,4 @@ p2.course-description {
     }
 }
 
-  
+  /* Mobilanpassning för meny */

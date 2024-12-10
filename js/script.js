@@ -181,3 +181,4 @@ function scrollToMinaErfarenheter() {
 function scrollToommig() {
     document.getElementById('om-mig').scrollIntoView({ behavior: 'smooth' });
 }
+

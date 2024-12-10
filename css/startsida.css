@@ -8,7 +8,8 @@
     background-position: center;
     color: white;
     text-align: center;
-    padding: 300px; /* Justera kuddavståndet efter behov */
+    padding: 350px; /* Justera kuddavståndet efter behov */
+    
    
 }
 .cta-button{
@@ -22,7 +23,8 @@
     font-size: 1.5rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     Position: absolute;
-    left: 220px;
+    left: 300px;
+    top: 500px;
 }
 .cta-button:hover{
     background-color: lightblue;
@@ -30,7 +32,7 @@
 
 .Storsäljare{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    padding-left: 15px;
+    padding-left: 80px;
     font-size: 20px;
    
 }
@@ -141,7 +143,7 @@
     font-size: 1.5rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     Position: absolute;
-    right: 550px;
+    right: 800px;
 }
 .cta-button2:hover{
     background-color: lightblue;
@@ -199,3 +201,6 @@
     transition: background-color 0.3s ease;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
+
+  /* Gör alla bilder responsiva */
+
