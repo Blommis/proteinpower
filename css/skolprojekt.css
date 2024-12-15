@@ -661,7 +661,7 @@ p2.course-description {
 
 /* Tidslinjestil */
 .timeline {
-    background-color: rgb(227, 236, 244);
+    
     position: relative;
     left: 220px;
     margin: 50px 20px;

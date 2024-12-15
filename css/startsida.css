@@ -23,8 +23,8 @@
     font-size: 1.5rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     Position: absolute;
-    left: 300px;
-    top: 500px;
+    left: 230px;
+    top: 520px;
 }
 .cta-button:hover{
     background-color: lightblue;
@@ -143,7 +143,7 @@
     font-size: 1.5rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     Position: absolute;
-    right: 800px;
+    right: 550px;
 }
 .cta-button2:hover{
     background-color: lightblue;
