@@ -182,3 +182,9 @@ function scrollToommig() {
     document.getElementById('om-mig').scrollIntoView({ behavior: 'smooth' });
 }
 
+window.addEventListener('resize', function() {
+    if (window.innerWidth !== document.documentElement.clientWidth) {
+        document.body.style.transform = 'scale(1)';  // Förhindrar att zoom påverkar sidan
+    }
+});
+

@@ -8,6 +8,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+     
 }
 
 
@@ -85,7 +86,7 @@ body {
     .skolprojektheader {
         background-image: url("../images/Skolprojekthead.png");
         background-size: cover;
-        padding: 60px 20px; /* Minska padding för mobil */
+        padding: 100px 20px; /* Minska padding för mobil */
         align-items: center; /* Centra innehåll för mobiler */
     }
 
@@ -94,22 +95,26 @@ body {
         font-size: 20px; /* Minska storleken på rubriken */
         margin-left: 0;
         position: relative;
-        bottom: 50px;
+        top: 50px;
+        right: px;
     }
 
     /* Justera textstorlek för brödtext för att passa på små skärmar */
     .skolprojektheader p {
         font-size: 10px;
-        margin-left: 0;
+        position: relative;
+        right: 100px;
+        top: 50px;
         text-align: left; /* Centrera texten på små skärmar */
         max-width: 70%;
     }
 
     .skolprojektheader p1 {
-        font-size: 15px;
-        top: 50px;
-        left: 0;
-        text-align: center; /* Centrera texten */
+        font-size: 10px;
+        text-align: left; /* Centrera texten */
+        position: relative;
+        margin-right: 200px;
+        top: 70px;
     }
 
     .skolprojektheader .button-container {
@@ -121,9 +126,12 @@ body {
 
     .skolprojektheader button {
         width: 100%; /* Gör knapparna 80% breda */
-        padding: 8px 16px; /* Minska padding för att göra knapparna mindre */
-        font-size: 0.9rem; /* Justera textstorlek för att passa bättre på mobil */
+        padding: 10px; /* Minska padding för att göra knapparna mindre */
+        font-size: 10px; /* Justera textstorlek för att passa bättre på mobil */
         margin: 0 auto; /* Centrerar knapparna */
+        position:relative; 
+        left: 120px;
+        bottom: 70px;
     }
 }
 
@@ -252,6 +260,9 @@ input#carousel-img7:checked ~ .carousel-navigation label:nth-of-type(7) {
     background-color: #282828;
 }
 @media screen and (max-width: 768px) {
+ 
+
+
     /* Anpassa layouten för mobilvy */
     .carousel-container-wrapper {
         flex-direction: column; /* Lägg elementen vertikalt */
@@ -262,28 +273,39 @@ input#carousel-img7:checked ~ .carousel-navigation label:nth-of-type(7) {
     /* Textcontainer */
     .text-container {
          /* Gör texten bredare men med marginaler */
-        text-align: justify; /* Gör texten lättare att läsa */
+        text-align: left;
         padding: 0 5%; /* Marginaler för balans */
     }
 
     #more-info h2 {
-        font-size: 1.5rem; /* Anpassa rubrikens storlek */
+        font-size: 15px; /* Anpassa rubrikens storlek */
         margin-bottom: 10px;
-        text-align: center; /* Centrera rubriken */
+        text-align: left; /* Centrera rubriken */
+        position: relative;
+        right: 90px;
+        bottom: 50px;
+        
     }
 
     #more-info p {
-        font-size: 1rem; /* Gör texten läsbar */
+        font-size: 10px; /* Gör texten läsbar */
         line-height: 1.5; /* Öka radavståndet för läsbarhet */
-        margin-bottom: 20px;
-        text-align: center;
-        width: auto; /* För bättre textblock */
+        margin-bottom: 80px;
+        text-align: left;
+        width:100%;
+        position: relative;
+        right: 90px;
+        bottom: 50px;
     }
+    
 
+    
     /* Karusellen */
     .carousel-container {
         width: 80%; /* Gör karusellen mindre än full bredd */
         max-width: 300px; /* Begränsa bredden */
+        position: relative;
+        bottom: 50px;
     }
 
     .carousel-img-container img {
@@ -300,7 +322,7 @@ input#carousel-img7:checked ~ .carousel-navigation label:nth-of-type(7) {
     .text-container {
         max-width: 100%; /* Låt texten ta hela bredden */
         padding: 0 10px; /* Marginaler runt texten */
-        text-align: justify;
+    
     }
 
     #more-info h2 {
@@ -388,7 +410,48 @@ input#carousel-img7:checked ~ .carousel-navigation label:nth-of-type(7) {
     max-width: 800px;
     margin-right: 100px; /* Ta bort vänster marginal */
 }
+@media screen and (max-width: 768px) {
+    .wrapper {
+        flex-direction: column; /* Gör layouten vertikal på mobil */
+        align-items: center; /* Centrerar innehållet */
+        gap: 15px; /* Minska mellanrummet på små skärmar */
+    }
+    .image-container {
+        order: 2;
+        width: 80%; /* Gör bildcontainern fullbredd på mobil */
+        margin-left: 0; /* Ta bort vänster marginal på mobil */
+    }
 
+    /* Bilder */
+    .image-style {
+        width: 100%; /* Gör bilderna fullbredd på mobil */
+        margin-bottom: 15px; /* Lägg till mellanrum mellan bilderna */
+    }
+    .text-container2 {
+        order: 1; /* Placera texten först */
+        width: 100%; /* Anpassa bredden till mobil */
+        align-items: center; /* Centrerar texten på mobil */
+        text-align: center; /* Centrera texten */
+    }
+    .semhead {
+        font-size: 1.8rem; /* Minska fontstorleken på rubriken */
+        margin-right: 0; /* Ta bort höger marginal på mobil */
+        text-align: left;
+        position: relative;
+        right: 130px;
+    }
+
+    /* Brödtext */
+    .semtext {
+        font-size: 0.9rem; /* Minska textstorleken för bättre läsbarhet på mobil */
+        width: 300px; /* Gör texten fullbredd på mobil */
+        margin-right: 0; /* Ta bort höger marginal */
+        position: relative;
+        right: 100px;
+    }
+}
+    
+    
 /* Grundinställningar för header */
 .seo-header {
     display: flex;
@@ -484,6 +547,52 @@ input#carousel-img7:checked ~ .carousel-navigation label:nth-of-type(7) {
 .visit-link button:hover {
     background-color: lightblue;
     transform: scale(1.05); /* Liten förstoring vid hover */
+}
+
+@media screen and (max-width: 768px) {
+    .seo-header {
+        flex-direction: column; /* Ändrar till vertikal layout */
+        padding: 20px; /* Anpassar padding för mobil */
+        max-width: 100%; /* Gör headern fullbredd */
+    }
+
+    /* Textcontainer */
+    .seo-header .text-container {
+        padding-right: 0; /* Tar bort padding på höger */
+        align-items: center; /* Centrerar texten */
+        text-align: left; /* Justerar texten till mitten */
+        margin-bottom: 20px; /* Lägg till mellanrum under texten */
+    }
+
+    .seo-header h1 {
+        font-size: 1.8rem; /* Minskar rubrikstorleken */
+    }
+
+    .seo-header p {
+        font-size: 1rem; /* Gör texten lättare att läsa på mobil */
+        line-height: 1.5;
+        max-width: 90%; /* Anpassar bredden */
+    }
+
+    .seo-header button {
+        font-size: 0.9rem; /* Justerar knappstorleken */
+        padding: 10px 20px; /* Mindre padding på knapp */
+    }
+
+    /* Bildcontainer */
+    .seo-header .image-container {
+        margin-right: 0; /* Tar bort marginal till höger */
+        margin-bottom: 20px; /* Lägg till mellanrum under bilden */
+        position: relative;
+        left: 70px;
+    
+    }
+
+    .seo-header .image-container img {
+        max-width: 90%; /* Gör bilden mer responsiv */
+        height: auto; /* Behåll proportioner */
+       
+    }
 }
 
 h2 {
@@ -744,19 +853,37 @@ p2.course-description {
 
     .text-section {
         margin-left: 0;
+        text-align: left;
     }
 
     .timeline {
-        border-left: none;
-        padding-left: 0;
+        left: 0; /* Tar bort vänsterjusteringen */
+        margin: 20px 10px; /* Anpassar marginalen för mobil */
+        padding: 10px; /* Minskar padding för mindre skärmar */
+        border-left: 3px solid #da9200; /* Minskar tjockleken på linjen */
     }
 
     .timeline-item {
-        padding-left: 0;
+        margin: 15px 0; /* Minskar mellanrummet mellan punkter */
+        padding-left: 15px; /* Mindre indrag för mobil */
     }
 
     .timeline-item::before {
-        left: calc(50% - 10px);
+        left: -10px; /* Justerar punkterna för mindre skärmar */
+        width: 15px; /* Gör punkterna mindre */
+        height: 15px; /* Gör punkterna mindre */
+    }
+
+    .timeline-item h3 {
+        font-size: 1rem; /* Minskar rubrikstorleken */
+        text-align: left; /* Ser till att texten är vänsterjusterad */
+    }
+
+    .timeline-item p {
+        font-size: 0.9rem; /* Minskar textstorleken för bättre läsbarhet */
+        line-height: 1.4; /* Justerar radavstånd */
+        max-width: 100%; /* Gör texten fullbredd på mobil */
+        padding-left: 0; /* Tar bort extra padding */
     }
 }
 

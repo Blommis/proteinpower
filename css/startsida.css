@@ -22,13 +22,31 @@
     transition: background-color 0.3s ease;
     font-size: 1.5rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    Position: absolute;
-    left: 230px;
-    top: 520px;
+    Position: relative;
+    top: 10px;
+    right: 370px;
 }
 .cta-button:hover{
     background-color: lightblue;
 }
+@media screen and (max-width: 768px) {
+    .hero {
+        padding: 70px 10px; /* Minskar padding för mobil */
+        background-size: cover; /* Ser till att bilden täcker */
+        text-align: center; /* Centrera innehåll */
+    }
+
+    .cta-button {
+        font-size: 10px; /* Minskar textstorleken */
+        padding: 5px; /* Minskar knappens storlek */
+        position: relative; /* Tar bort absolut positionering */
+        right:100px; /* Tar bort vänsterjustering */
+        top: 10px;
+        max-width: 50px; /* Begränsar knappens bredd */
+        
+    }
+}
+
 
 .Storsäljare{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -121,6 +139,140 @@
     font-size: 15px;
 }
 
+/* Mobilanpassad kod */
+@media screen and (max-width: 768px) {
+    .Storsäljare{
+        text-align: left;
+        position: relative;
+        right: 60px;
+        font-size: smaller;
+    }
+
+    .products-container {
+        
+        flex-wrap: wrap; /* Gör att produkterna bryts rad efter rad */
+        justify-content: space-between; /* Jämnt fördelade produkter */
+        width: 750px; /* Bredd på container */
+        position: relative;
+        right: 80px;
+        
+    }
+    
+    .product {
+        flex: 0%; /* Gör så att produkterna är två per rad */
+        margin: 0; /* Ta bort margin för att minska mellanrum */
+        padding: 5px; /* Lite inre padding för att hålla det kompakt */
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column; /* Ordna innehållet vertikalt */
+        justify-content: flex-start; /* Se till att innehållet är i toppen av boxen */
+        gap: 8px; /* Minskat gap mellan elementen inom varje produktbox */
+    }
+    
+
+    .product img {
+        width: 100%; /* Bilden täcker hela bredden av produktens container */
+        height: 50%; /* Bilden täcker halva höjden på produktens container */
+        object-fit: cover; /* Gör att bilden täcker utrymmet utan att bli förvrängd */
+        margin-bottom: 10px; /* Avstånd mellan bild och rubrik */
+    }
+
+    .product h2 {
+        margin-top: 0;
+        font-size: 10px;
+        margin-bottom: 4px; /* Minskat avstånd under rubriken */
+        text-align: left; /* Centrerar rubriken under bilden */
+    }
+
+    .product p {
+        margin: 0; /* Ta bort marginaler runt paragrafen */
+         /* Minska padding för att komprimera texten */
+        text-align: left;
+        font-size:5px;
+    }
+
+    .product .ratings {
+        margin-top: 6px; /* Minska avståndet för betyg */
+    }
+
+    .product .ratings .star {
+        color: gold;
+    }
+
+    .product .ratings .rating-average {
+        font-size: 14px;
+        color: #555;
+    }
+
+    .buy-button {
+        padding: 8px 0;
+        font-size: 14px; /* Minska textstorleken på knappen för att passa bättre på mobilen */
+    }
+}
+
+
+.newsletter-box {
+    background-color: #fff;
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;;
+  }
+  
+  .newsletter-box h2{
+    font-size: 20px;
+    
+
+}
+
+  
+  
+  input[type="email"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .Prenumerera{
+    width: calc(100% - 20px);
+    padding: 10px;
+    background-color: rgb(18, 38, 58);
+    color: #fff;
+    border: none;
+    font-size: larger;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  .Prenumerera:hover{
+    background-color: lightblue;
+  }
+  @media screen and (max-width: 768px) {
+    .newsletter-box {
+        max-width: 80%; /* Minska bredden på mobil */
+        padding: 8px; /* Minska padding för att göra boxen lite mindre */
+    }
+
+    .newsletter-box h2 {
+        font-size: 20px; /* Minska rubrikens storlek */
+    }
+   
+
+    input[type="email"], .Prenumerera {
+        padding: 8px; /* Minska padding på inputfält och knapp */
+        font-size: 14px; /* Minska fontstorlek för inputfält och knapp */
+    }
+
+    .Prenumerera {
+        font-size: 16px; /* Justera knappens storlek för att passa bättre på små skärmar */
+    }
+}
 .hero2{
     background-image: url("../images/suddig-bodybuilders.png");
     background-size: cover;
@@ -148,47 +300,6 @@
 .cta-button2:hover{
     background-color: lightblue;
 }
-.newsletter-box {
-    background-color: #fff;
-    max-width: 400px;
-    margin: 10px auto;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  .newsletter-box h2{
-    font-size: 20px;
-    
-
-}
-  
-  
-  input[type="email"] {
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .Prenumerera{
-    width: calc(100% - 20px);
-    padding: 10px;
-    background-color: rgb(18, 38, 58);
-    color: #fff;
-    border: none;
-    font-size: larger;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  }
-  .Prenumerera:hover{
-    background-color: lightblue;
-  }
-
   .tillprodukternaknapp{
     width: calc(100% - 20px);
     padding: 10px;
@@ -204,3 +315,26 @@
 
   /* Gör alla bilder responsiva */
 
+  @media screen and (max-width: 768px) {
+    .hero2 {
+        padding: 50px 20px; /* Minska padding på mobilen för att ge mer utrymme för innehåll */
+        font-size: 18px; /* Justera fontstorlek för att passa bättre på små skärmar */
+        text-align: left;
+    }
+
+    .cta-button2 {
+        font-size: 15px; /* Minska fontstorleken på knappen för mindre skärmar */
+        padding: 8px; /* Justera padding för en kompaktare knapp */
+        width: 20%; /* Gör knappen fullbredd på mobilen */
+        margin-top: 15px; /* Lägg till marginal ovanför knappen */
+        position: relative;
+        left: 120px;
+        text-align: center;
+        
+    }
+
+    .tillprodukternaknapp {
+        font-size: 16px; /* Minska fontstorlek för bättre läsbarhet på mobilen */
+        padding: 12px 20px; /* Minska padding för att passa mindre skärmar */
+    }
+}

@@ -62,11 +62,7 @@ header {
 
 @media only screen and (max-width: 768px) {
     /* Centrera logotypen på mobilen */
-    .logo {
-        font-size: 30px; /* Minska storleken på logotypen för mobil */
-        text-align: center;
-        flex-grow: 1;
-    }
+    
    .search {
    width: 150px;
    padding: 5px;
@@ -157,7 +153,7 @@ header {
 .dropdown-content {
     display: none;
     position: absolute;
-    right: 880px;
+    right: 725px;
     top: 140px;
     background-color: #f9f9f9;
     min-width: 90px;
@@ -204,9 +200,131 @@ header {
     justify-content: space-between; /* Justera mellanrummet mellan td-elementen */
 }
 
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: rgb(18, 38, 58);
+    border-radius: 4px;
+    margin-bottom: 4px;
+}
+
+/* Mobilmeny (dold som standard) */
+.mobile-menu {
+    display: none;
+    font-size: 11px;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    width: 150px;
+    background-color: #f0f4f8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 1000;
+    text-align: left;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 5px 0;
+}
+
+.mobile-menu li {
+    padding: 10px 15px;
+    text-align: center;
+}
+
+.mobile-menu a {
+    text-decoration: none;
+    color: rgb(18, 38, 58);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.mobile-menu a:hover {
+    background-color: lightblue;
+    border-radius: 4px;
+}
+
+/* Visa hamburgermenyn på mindre skärmar */
+@media only screen and (max-width: 768px) {
+    /* Visa hamburgermenyn */
+    .hamburger-menu {
+        display: flex;
+        position: relative;
+        margin-right: 280px;
+        bottom: 64px;
+    }
+    .right-icons {
+        justify-content: flex-end;
+    }
+    .menu {
+        display: none; /* Dölj datorversionens meny */
+    }
+    .logo {
+        font-size: 25px; /* Minska storleken på logotypen för mobil */
+        position: relative;
+        left: 50px;
+        bottom: 10px;
+        
+    }
+    /* För att göra "Min portfolio" mer centralt och mindre */
+    .portfolio {
+        font-size: 10px; /* Justera storlek */
+        text-align: center;
+        margin-top: 40px;
+    }
+    
+    /* Justera bakgrundens höjd på mobil */
+    header {
+        padding: 5px 10px;
+        background-color: rgb(227, 236, 244);
+        height: 20px;
+    }
 
 
- 
+    
+    /* För att placera kundvagnen korrekt utan att skjuta bort den */
+    .icon-cart {
+        position: relative;
+        margin-right: 720px;
+        margin-top: 40px;
+        font-size: 10px;
+    }
+    .search {
+        display: none; /* Döljer textfältet */
+    }
 
+    .hamburger-menu span {
+        display: block;
+        width: 30px;
+        height: 4px;
+        background-color: rgb(18, 38, 58);
+        border-radius: 4px;
+    }
 
-
+    .mobile-menu.show-menu {
+        display: flex;
+    }
+    .litenheader {
+        display: flex;
+        font-size: 10px;
+        height: 20px;
+        background-color: rgb(18, 38, 58);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        padding: 1px; /* Lägg till lite utrymme runt texten */
+        color: white;
+        margin-right: 10px; /* Lägg till önskad marginal här */
+        justify-content: space-between;
+    }
+}

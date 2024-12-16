@@ -77,3 +77,43 @@ a{
 .button-link:hover{
     background-color: lightblue;
 }
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Stapla elementen vertikalt på små skärmar */
+        align-items: flex-start; /* Placera innehållet till vänster */
+        gap: 5px; /* Lägg till ett litet gap mellan sektionerna */
+    }
+    
+    .footer-section {
+        flex: 1 1 100%; /* Gör varje sektion fullbredd på mobilen */
+        margin-bottom: 5px; /* Minska marginalen mellan sektionerna */
+    }
+    
+    .footer-section h3 {
+        font-size: 16px; /* Minska storleken på rubrikerna */
+        margin-bottom: 5px; /* Minska avståndet under rubrikerna */
+    }
+    
+    .footer-section ul li {
+        font-size: 12px; /* Minska storleken på texten */
+        margin-bottom: 5px; /* Minska avståndet mellan listobjekten */
+    }
+    
+    .social-media {
+        margin-top: 10px;
+        text-align: center; /* Centrera ikonerna om det behövs */
+    }
+    
+    .social-media img {
+        width: 30px; /* Minska storleken på ikonerna */
+        height: 30px;
+        margin: 0 5px; /* Lägg till lite mellanrum mellan ikonerna */
+    }
+    
+    .button-link {
+        width: 100%; /* Gör knappen fullbredd på små skärmar */
+        padding: 8px;
+        font-size: 12px; /* Minska fontstorleken på knappen */
+        margin-top: 10px; /* Lägg till ett litet avstånd ovanför knappen */
+    }
+}
