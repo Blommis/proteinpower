@@ -142,10 +142,11 @@ fieldset{
     .button-link2 {
         right: 0;  /* Ta bort extra högerposition */
         font-size: 14px;  /* Justera fontstorlek */
-        padding: 5px 10px;  /* Justera padding */
-        position: relative;
-        right: 70px;
-        bottom: 20px;
+        padding: 5px 3px;  /* Justera padding */
+        position: absolute;
+        right: 200px;
+        top: 0px;
+       
     }
 
     /* Justera FAQ-sektion */
@@ -188,9 +189,10 @@ fieldset{
     .karta iframe {
         width: 100px;  /* Gör kartan fullbredd på små skärmar */
         height: 100px; 
-        position: relative;
+        position:absolute;
         left: 200px; 
-        bottom: 130px;/* Justera höjden på kartan för att passa bättre */
+        top: 590px;
+        /* Justera höjden på kartan för att passa bättre */
     }
 
     /* Justera rubrikens position */
