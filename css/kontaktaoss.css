@@ -2,16 +2,19 @@
     background-image: url("../images/headkontaktaoss.png");
     background-size: cover;
     background-position: center;
-    
-   
     padding: 120px;
-    height: 340px;
+    height: 250px;
+}
+.kontaktaosshero h1{
+position: relative;
+bottom: 30px;
 }
 
 .kontaktaosshero p{
     position: relative;
-    bottom:120px;
+    bottom:10px;
     right: 50px;
+    font-size: larger;
 }
 li{
     list-style: none;
@@ -24,10 +27,10 @@ li{
 }
 
 .telefonhittahit{
-    font-size: 20px;
+    font-size: 30px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     position: relative;
-    bottom: 30px;
+    top: 80px;
     right: 15px;
 }
 .button-link2{
@@ -42,7 +45,8 @@ li{
         font-size: 20px;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         position: relative;
-        right: 350px;
+        right: 470px;
+        top: 140px;;
 }
 .button-link2:hover{
     background-color: lightblue;
@@ -59,12 +63,7 @@ fieldset{
     margin-left: 120px;
 }
 
-.faq-section {
-    position: absolute;
-    top: 780px; /* Justera önskad höjd från toppen */
-    right: 150px; /* Justera önskat avstånd från höger */
-    width: 400px; /* Justera önskad bredd */
-}
+
 .faq-section li {
     margin-bottom: 5px; /* Justera efter behov */
     text-align: center;
@@ -83,4 +82,117 @@ fieldset{
     margin-bottom: 3px; /* Justera efter behov */
     margin-left: 2px;
     text-align: center;
+}
+.karta iframe{
+    position: relative;
+    left: 550px;
+    top: 450px;
+}
+.customerservices {
+    background-color: rgb(227, 236, 244);  /* Ljus bakgrundsfärg */
+    border-radius: 8px;  /* Rundade hörn */
+    padding: 20px;  /* Inre padding */
+    margin: 20px 0;  /* Marginal för att ge utrymme runt */
+    text-align: center;  /* Centrerad text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Lätt skugga för att ge en upphöjd effekt */
+}
+
+.customerservices h2 {
+    font-size: 1.5rem;  /* Större rubrikstorlek */
+    color: #333;  /* Mörk färg för rubriken */
+    margin-bottom: 10px;  /* Avstånd under rubriken */
+}
+@media (max-width: 768px) {
+    /* Anpassa kontaktaosshero */
+    .kontaktaosshero {
+        padding: 80px 30px;  /* Justera padding för mobila skärmar */
+        height: 90px;  /* Ta bort höjdbegränsning för att anpassa efter innehåll */
+    }
+    .kontaktaosshero h1{
+        font-size: 15px;
+        position: relative;
+        right: 15px;
+        bottom: 70px;
+    }
+    .kontaktaosshero p {
+        position: relative;
+        bottom: 60px;  /* Justera textposition */
+        right: 60px;  /* Minska högerposition */
+        font-size: 14px;  /* Minska fontstorlek för mobil */
+        width: 70%;
+        text-align: left;
+    }
+
+    /* Anpassa list-sektion */
+    .list-section {
+        position: relative;
+        bottom: 60px;  /* Minska bottom-position */
+        right: 0;  /* Ta bort extra högerposition */
+    }
+
+    /* Anpassa telefonhittahit */
+    .telefonhittahit {
+        font-size: 14px;  /* Minska fontstorlek */
+        position: relative;
+        bottom: 30px;  /* Minska bottom-position */
+        right: 70px;
+    }
+
+    /* Anpassa knappens position */
+    .button-link2 {
+        right: 0;  /* Ta bort extra högerposition */
+        font-size: 14px;  /* Justera fontstorlek */
+        padding: 5px 10px;  /* Justera padding */
+        position: relative;
+        right: 70px;
+        bottom: 20px;
+    }
+
+    /* Justera FAQ-sektion */
+    
+    .customerservices {
+        .customerservices {
+            width: 00%;  /* Gör sektionen fullbredd på mobiler */
+            max-width: none;  /* Ta bort maxbredden */
+            padding: 15px;  /* Justera padding för små skärmar */
+        } /* Gör sektionen fullbredd på mobiler */
+     
+    }
+
+    .customerservices h2 {
+        font-size: 20px;  /* Minska rubrikstorleken för mobiler */
+        width: 300px;
+    }
+
+    .customerservices p {
+        font-size: 16px;  /* Minska textstorleken på mobiler */
+        width: 100px;
+        text-align: left;
+    }
+    
+
+    /* Justera fälten */
+    fieldset {
+        margin-left: 0;  /* Ta bort vänstermarginal */
+        margin-right: 0;  /* Ta bort höger marginal */
+        position: relative;
+        left: 47px;
+        width: 50px;
+
+    }
+   
+
+    /* Justera rubrikens position */
+    
+
+    .karta iframe {
+        width: 100px;  /* Gör kartan fullbredd på små skärmar */
+        height: 100px; 
+        position: relative;
+        left: 200px; 
+        bottom: 130px;/* Justera höjden på kartan för att passa bättre */
+    }
+
+    /* Justera rubrikens position */
+    
 }

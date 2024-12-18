@@ -28,7 +28,38 @@
     color: white;
     padding-left: 45px;
 }
+@media (max-width: 768px) {
+    /* Anpassningar för omosshero */
+    .omosshero {
+        background-attachment: scroll;  /* För att fixa problem med fixed background på mobiler */
+        padding: 20px;  /* Minska padding på mobilen */
+        font-size: 16px;  /* Justera fontstorlek */
+        text-align: left;
+    }
+    .omosshero p {
+        position: relative;
+        right: 40px;
+    }
     
+
+    /* Anpassningar för vårhistoria */
+    .vårhistoria {
+        padding: 60px 10px;  /* Justera padding för mindre skärmar */
+        padding-left: 10px;  /* Minska vänsterpadding */
+        margin-top: 0px;  /* Minska topp-padding */
+        font-size: 16px;  /* Justera fontstorlek för mobil */
+    }
+
+    .vårhistoria h2 {
+        padding-left: 10px;  /* Minska vänsterpadding på rubriken */
+        font-size: 25px
+    }
+    .vårhistoria p {
+        position: relative; 
+        right: 40px;/* Minska vänsterpadding på rubriken */
+        bottom: 30px;
+    }
+}
    
 
     

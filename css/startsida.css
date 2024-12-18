@@ -141,7 +141,7 @@
 
 /* Mobilanpassad kod */
 @media screen and (max-width: 768px) {
-    .Storsäljare{
+    .Storsäljare {
         text-align: left;
         position: relative;
         right: 60px;
@@ -149,27 +149,30 @@
     }
 
     .products-container {
-        
+        display: flex;
         flex-wrap: wrap; /* Gör att produkterna bryts rad efter rad */
-        justify-content: space-between; /* Jämnt fördelade produkter */
-        width: 750px; /* Bredd på container */
-        position: relative;
-        right: 80px;
         
+        width: 200%; /* Gör containern fullbredd på mobilen */
+        position: relative;
+        right: 70px;
     }
     
     .product {
-        flex: 0%; /* Gör så att produkterna är två per rad */
-        margin: 0; /* Ta bort margin för att minska mellanrum */
+        flex: 0 0 calc(50% - 10px); /* Två produkter per rad med liten marginal */
+        margin-bottom: 10px; /* Lägger till mellanrum nedåt mellan rader */
         padding: 5px; /* Lite inre padding för att hålla det kompakt */
         border: 1px solid #ccc;
         border-radius: 5px;
         display: flex;
         flex-direction: column; /* Ordna innehållet vertikalt */
         justify-content: flex-start; /* Se till att innehållet är i toppen av boxen */
-        gap: 8px; /* Minskat gap mellan elementen inom varje produktbox */
+        box-sizing: border-box; /* Gör att padding och border räknas in i bredden */
     }
-    
+
+    /* För att säkerställa att produkterna bryts korrekt och inte blir tre per rad */
+    .products-container .product:nth-child(odd) {
+        margin-right: 10px; /* Lägg till ett litet mellanrum till höger på den första produkten */
+    }
 
     .product img {
         width: 100%; /* Bilden täcker hela bredden av produktens container */
@@ -187,9 +190,8 @@
 
     .product p {
         margin: 0; /* Ta bort marginaler runt paragrafen */
-         /* Minska padding för att komprimera texten */
         text-align: left;
-        font-size:5px;
+        font-size: 5px;
     }
 
     .product .ratings {
@@ -205,11 +207,14 @@
         color: #555;
     }
 
-    .buy-button {
+    .buy-button  {
         padding: 8px 0;
         font-size: 14px; /* Minska textstorleken på knappen för att passa bättre på mobilen */
     }
+ 
 }
+
+
 
 
 .newsletter-box {

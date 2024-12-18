@@ -8,6 +8,29 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     
 }
+.produkthero h1 {
+    font-size: 100px; /* Standardstorlek för större skärmar */
+    margin: 0; /* Ta bort eventuella extra marginaler */
+}
+@media screen and (max-width: 768px) {
+    
+    @media screen and (max-width: 768px) {
+        .produkthero {
+            padding: 50px; /* Mindre padding för mobil */
+            background-size: cover; /* Anpassa bakgrundsbilden */
+            position: relative;
+            
+        }
+    }
+    
+        .produkthero h1 {
+            font-size: 30px; /* Anpassa textstorleken för mindre skärmar */
+        }
+    }
+    
+   
+    
+
 .buy-button {
     display: block;
     width: 100%;
@@ -33,6 +56,18 @@
 .Träningskläder{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding-left: 90px;
+}
+@media screen and (max-width: 768px) {
+    .Träningskläder{
+        font-size: 10px;
+        position: relative;
+        right: 70px;
+    }
+    .Kosttillskott{
+        font-size: 10px;
+        position: relative;
+        right: 70px;
+    }
 }
 .product {
     margin:15px; /* Minskat avstånd mellan produkter */
@@ -144,4 +179,48 @@ select {
 .buy-button,
 .read-more-button {
     margin-top: 3px; /* Justera avståndet mellan knapparna genom att ändra detta värde */
+}
+.kostillskottprodukter{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 77px;
+    
+}
+@media screen and (max-width: 768px) {
+    .product {
+        max-width: 100%; /* Full bredd för produkter */
+        margin: 5px auto; /* Minska marginal för bättre passform */
+    }
+    
+    .product h2 {
+        font-size: 16px; /* Anpassa titlar för mindre skärmar */
+    }
+
+    .product p {
+        font-size: 20px; /* Minska textstorlek */
+    }
+
+    .products-container {
+        flex-direction: column; /* Stapla produkter vertikalt */
+         /* Mindre avstånd mellan produkter */
+        width: 70%;
+        position: relative;
+        right: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; /* Fördela produkter jämnt */
+        align-items: flex-start; 
+    }
+    .kostillskottprodukter{
+        position: relative;
+        left: 85px;
+        width: 75%;
+    }
+    
+
+    .modal-content {
+        width: 95%; /* Nästan full bredd på mobil */
+    }
+
+    
 }

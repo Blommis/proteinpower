@@ -56,6 +56,33 @@
        
         </nav>
     </header>
+    <div>
+        <header class="litenheader">
+            <table>
+                <tr class="flex-container">
+                    <td class="inline">Fri frakt.</td>
+                    <td class="inline">Snabb leverans.</td>
+                    <td class="inline">Leveranstid 1-2 dagar.</td>
+                </tr>
+            </table>
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="mobile-menu">
+                <ul>
+                    <li><a href="index.html">Hem</a></li> <br>
+                    <li><a href="produkt.html">Produkter</a></li>
+                    <li><a href="https://blomquist799.wordpress.com/">Aktuell kampanj</a></li>
+                    <li><a href="omoss.html">Om oss</a></li>
+                    <li><a href="kontaktaoss.html">Kontakta oss</a></li>
+                    <li><a href="skolprojekt.html">Mina övriga skolprojekt</a></li>
+                </ul>
+            </nav>
+            
+        </header>
+    </div>
     
     
     
@@ -66,17 +93,18 @@
             <li><a href="kontaktaoss.html" class="telefonhittahit" style="color: white;">Telefonnummer: 123-456-789</a></li>
             <li><a href="kontaktaoss.html"  class="button-link2" class="telefonhittahit">Hitta till vår butik</a></li>
         </ul>
-        <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2031.4345642589324!2d13.531284376437055!3d59.392461974644945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465cb167f20d4065%3A0xadf23314a4169b8c!2sEdeb%C3%A4cksgatan%207%2C%20654%2061%20Karlstad!5e0!3m2!1ssv!2sse!4v1710244163450!5m2!1ssv!2sse" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+        <p class="karta"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2031.4345642589324!2d13.531284376437055!3d59.392461974644945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465cb167f20d4065%3A0xadf23314a4169b8c!2sEdeb%C3%A4cksgatan%207%2C%20654%2061%20Karlstad!5e0!3m2!1ssv!2sse!4v1710244163450!5m2!1ssv!2sse" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
     </div>
    
     
     
     <br><br>
 
-    <fieldset style="width: 30%;">
-        <h2 style="margin: 30px;">Kundtjänst öppettider:</h2>
-        <p>Måndag-fredag: 08-16<br>Lördag-söndag:Stängt</p>
-    </fieldset>
+    <div class="customerservices">
+        <h2>Kundtjänst öppettider:</h2>
+        <p>Måndag-fredag: 08-16<br>Lördag-söndag: Stängt</p>
+    </div>
+    
     <br><br>
     <form id="form" name="form" method="post" action="">
 
@@ -95,24 +123,7 @@
         <input type="submit" name="skicka" id="skicka" value="Skicka meddelandet" />
         </fieldset>
         </form>
-         <fieldset class="faq-section">
-        <h3 class="typsnitt">Vanliga frågor och svar</h3>
-        <ul>
-            <li>
-                <h4>Hur kontaktar jag kundtjänst?</h4>
-                <p>Du kan kontakta vår kundtjänst via telefon, e-post eller besöka vår butik personligen.</p>
-            </li>
-            <li>
-                <h4>Hur lång tid tar det att få svar på min e-post?</h4>
-                <p>Vi strävar efter att svara inom 24 timmar från mottagandet av ditt meddelande.</p>
-            </li>
-            <li>
-                <h4>Hur mycket proteinpulver bör jag konsumera per dag?</h4>
-                <p>Det beror på dina individuella mål och proteinbehov, men generellt sett rekommenderas det att konsumera mellan 20-40 gram proteinpulver per portion, upp till 1-2 portioner per dag.</p>
-            </li>
-            <!-- Andra frågor och svar här -->
-        </ul>
-    </fieldset>
+         
         <br>
         <footer>
             <div class="footer-container">
@@ -156,5 +167,6 @@
 
         
         <script src="js/script.js"></script>
+        <script src="js/hamburger.js"></script>
 </body>
 </html>
