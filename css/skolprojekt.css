@@ -97,6 +97,7 @@ body {
         position: relative;
         top: 50px;
         right: px;
+        
     }
 
     /* Justera textstorlek för brödtext för att passa på små skärmar */
@@ -278,12 +279,13 @@ input#carousel-img7:checked ~ .carousel-navigation label:nth-of-type(7) {
     }
 
     #more-info h2 {
-        font-size: 15px; /* Anpassa rubrikens storlek */
+         /* Anpassa rubrikens storlek */
         margin-bottom: 10px;
         text-align: left; /* Centrera rubriken */
         position: relative;
-        right: 90px;
+        right: 140px;
         bottom: 50px;
+        width: 100%;
         
     }
 
@@ -735,7 +737,10 @@ p2.course-description {
     .image-section img {
         max-width: 80%;
     }
-
+    .other-courses h2{
+        font-size: 35px;
+        
+    }
 }
 
 

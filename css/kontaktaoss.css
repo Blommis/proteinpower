@@ -106,7 +106,7 @@ fieldset{
     /* Anpassa kontaktaosshero */
     .kontaktaosshero {
         padding: 80px 30px;  /* Justera padding för mobila skärmar */
-        height: 90px;  /* Ta bort höjdbegränsning för att anpassa efter innehåll */
+        height: 120px;  /* Ta bort höjdbegränsning för att anpassa efter innehåll */
     }
     .kontaktaosshero h1{
         font-size: 15px;
@@ -188,10 +188,10 @@ fieldset{
 
     .karta iframe {
         width: 100px;  /* Gör kartan fullbredd på små skärmar */
-        height: 100px; 
+        height: 90px; 
         position:absolute;
         left: 200px; 
-        top: 590px;
+        top: 5px;
         /* Justera höjden på kartan för att passa bättre */
     }
 
