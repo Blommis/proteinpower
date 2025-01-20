@@ -13,7 +13,7 @@
     
 .mobile-only {
     display: none; /* Dölj som standard */
-    background-image: url("/images/nyportfolioheader.jpg");
+    background-color: black;
     background-size: cover;
     height: 750px; /* Täcker hela höjden */
     padding: 20px;

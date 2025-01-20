@@ -161,7 +161,7 @@ input#carousel-img7:checked ~ .carousel-navigation label:nth-of-type(7) {
         
     }
     .carousel-container {
-    background-color: #018b62;
+   
     position: relative;
     bottom: 50px;
    right: 100px;
@@ -316,7 +316,7 @@ background-color: #018b62;
 .marquee-content {
     display: flex;
     gap: 40px; /* Större mellanrum mellan symbolerna */
-    animation: scroll-left 15s linear infinite; /* Tiden för ett varv */
+    animation: scroll-left 30s linear infinite; /* Tiden för ett varv */
     list-style: none;
     padding: 0;
     margin: 0;
@@ -328,7 +328,7 @@ background-color: #018b62;
         transform: translateX(0); /* Startposition */
     }
     100% {
-        transform: translateX(-70%); /* Flytta hela raden utanför till vänster */
+        transform: translateX(-100%); /* Flytta hela raden utanför till vänster */
     }
 }
 
@@ -367,7 +367,7 @@ background-color: #018b62;
     /* Definiera animation för marquee */
     @keyframes marquee {
         0% {
-            transform: translateX(100%);
+            transform: translateX(0);
         }
         100% {
             transform: translateX(-100%);
