@@ -1,0 +1,99 @@
+/* High-tech meny */
+
+.high-tech-menu.high-tech-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #0f0f0f, #1f1f1f);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+
+.menu {
+    display: none; /* Dölj menyn som standard */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    height: 120px;
+    
+    
+}
+
+.menu li {
+    margin: 10px 0;
+    display: flex;
+    margin-left: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #64FFDA; /* Neonfärg */
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.menu a:hover {
+    color: #BB86FC;
+}
+
+/* Hamburgarikonen */
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    margin: 15px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+/* Aktiv meny */
+.menu-active .menu {
+    display: block; /* Visa menyn */
+    background: linear-gradient(180deg, #0f0f0f, #1f1f1f);
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    left: 0;
+    padding: 10px 0;
+    border-top: 1px solid #64FFDA;
+}
+
+/* Övergång för ikonen vid aktiv meny */
+.menu-active .menu-toggle span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-active .menu-toggle span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-active .menu-toggle span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobilanpassning */
+@media (max-width: 768px) {
+    .menu {
+        font-size: 14px;
+        
+    }
+
+    .menu a {
+        font-size: 18px;
+    }
+}

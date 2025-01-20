@@ -1,0 +1,379 @@
+
+#more-info{
+    background-color: #f4f4f4;
+    height: 150px;
+    
+}
+
+#more-info h2{
+    font-size: 2,5rem;
+    margin-bottom: 10px;
+    text-align: left;
+
+    
+}
+
+#more-info p {
+    font-size: 0,5rem;
+    color: #333;
+    max-width: 800px;
+    margin-left: 100px;
+    text-align: left;
+    position: relative;
+    right: 55px;
+    bottom: 20px;
+}
+
+/* Wrapper för att hantera layouten */
+.carousel-container-wrapper {
+    display: flex;
+    align-items: center; /* Vertikalt centrera innehåll */
+    justify-content: space-between; /* Skapa utrymme mellan text och karusell */
+    gap: 150px; /* Avstånd mellan text och karusell */
+    padding-left: 100px;
+    
+}
+
+/* Textcontainer */
+.text-container {
+    flex: 1;
+    max-width: 45%; /* Maxbredd för texten */
+    height: 600px;
+    
+}
+.text-container h2{
+    
+    padding-top: 100px;
+    width: 100%;
+    padding-left: 40px;
+    padding-top: 0px;
+}
+.text-container p{
+    position: relative;
+    bottom: 40px;
+    width: 100%;
+    
+}
+
+/* Stilar för karusellen */
+.carousel-container {
+    
+    position: relative;
+    bottom: 120px;
+   left: 250px;
+    width: 100%;
+    max-width: 300px;
+    overflow: hidden;
+    margin: 0 auto;
+    padding-top: 60px;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-img-container {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.carousel-img-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Dölj radio-knapparna */
+input[type="radio"] {
+    display: none;
+}
+
+/* Navigeringsknappar */
+.carousel-navigation {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.carousel-nav-btn {
+    width: 8px;
+    height: 8px;
+    margin: 0 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Anpassa karusellen beroende på vilken bild som är vald */
+input#carousel-img1:checked ~ .carousel-track {
+    transform: translateX(0);
+}
+
+input#carousel-img2:checked ~ .carousel-track {
+    transform: translateX(-100%);
+}
+
+input#carousel-img3:checked ~ .carousel-track {
+    transform: translateX(-200%);
+}
+
+input#carousel-img4:checked ~ .carousel-track {
+    transform: translateX(-300%);
+}
+
+input#carousel-img5:checked ~ .carousel-track {
+    transform: translateX(-400%);
+}
+
+input#carousel-img6:checked ~ .carousel-track {
+    transform: translateX(-500%);
+}
+
+input#carousel-img7:checked ~ .carousel-track {
+    transform: translateX(-600%);
+}
+
+/* Ändra bakgrundsfärgen på de valda navigeringsknapparna */
+input#carousel-img1:checked ~ .carousel-navigation label:nth-of-type(1),
+input#carousel-img2:checked ~ .carousel-navigation label:nth-of-type(2),
+input#carousel-img3:checked ~ .carousel-navigation label:nth-of-type(3),
+input#carousel-img4:checked ~ .carousel-navigation label:nth-of-type(4),
+input#carousel-img5:checked ~ .carousel-navigation label:nth-of-type(5),
+input#carousel-img6:checked ~ .carousel-navigation label:nth-of-type(6),
+input#carousel-img7:checked ~ .carousel-navigation label:nth-of-type(7) {
+    background-color: #282828;
+}
+@media screen and (max-width: 768px) {
+ 
+
+
+    /* Anpassa layouten för mobilvy */
+    .carousel-container-wrapper {
+        flex-direction: column; /* Lägg elementen vertikalt */
+        align-items: center; /* Centrera innehållet */
+        gap: 20px; /* Skapa avstånd mellan elementen */
+       position: relative;
+       right: 100px;
+      
+        
+    }
+    .carousel-container {
+    background-color: #018b62;
+    position: relative;
+    bottom: 50px;
+   right: 100px;
+    width: 100%;
+    max-width: 300px;
+    overflow: hidden;
+    margin: 0 auto;
+    padding-top: 60px;
+}
+    #more-info{
+        
+       height: 350px;
+        
+        
+    }
+
+    .carousel-container {
+        width: 90%; /* Gör karusellen mindre än full bredd */
+        max-width: 300px; /* Begränsa bredden */
+        position: relative;
+        left: 10px;
+        top: 400px;
+        
+        padding-top: 10px;
+        padding-bottom: 10px;
+        height: 400px;
+    }
+
+    .carousel-img-container img {
+        width: 100%; /* Bilden fyller hela karusellens bredd */
+        height: auto; /* Behåll proportionerna */
+    }
+
+    .carousel-navigation {
+        bottom: 5px; /* Flytta navigeringsknapparna närmare karusellen */
+    }
+    .text-container {
+    max-width: 100%; /* Låt texten ta hela bredden */
+         /* Marginaler runt texten */
+    text-align: left;
+    padding-right: 70px;
+    }
+    .text-container h2{
+        width: 800px;
+        font-size: 35px;
+        
+    }
+    .text-container p{
+        width: 130%;
+    }
+
+
+    #content-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centrerar knappen horisontellt */
+    }
+    
+    #myBtn {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 20px;
+        border-radius: 15px;
+        border: none;
+        padding: 13px 34px;
+        background-color: aquamarine;
+        text-align: center;
+        margin-top: 10px; /* Litet avstånd mellan text och knapp */
+        align-self: center; /* Centrerar knappen i förhållande till flex-behållaren */
+    }
+    
+#myBtn:hover {
+background-color: #018b62;
+}
+#sem-myBtn{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    border-radius: 25px 25px;
+    border-style:hidden;
+    padding: 10px 34px;
+    background-color: aquamarine;
+    margin-left: 50px;
+}
+#more {display: none;}
+/* Enkel styling för carousel */
+}
+/* Döljer Läs mer-knappen och extra texten på datorversioner */
+@media only screen and (min-width: 768px) {
+    #myBtn{
+        display: none;
+    }
+
+
+    #dots {
+        display: none; /* Dölj ellipsen */
+    }
+
+    #more {
+        display: inline; /* Visa hela texten */
+    }
+
+    #carousel {
+        display: block !important;/* Visa karusellen direkt */
+        visibility: visible;
+        
+    }
+    
+
+}
+/* Visar Läs mer-knappen och döljer extra text och karusell på mobilversion */
+@media only screen and (max-width: 767px) {
+    #myBtn {
+        display: inline-block; /* Visa Läs mer-knappen */
+    }
+
+    #dots {
+        display: inline; /* Visa ellipsen */
+    }
+
+    #more {
+        display: none; /* Dölj extra texten */
+    }
+
+    #carousel {
+        display: none; /* Dölj karusellen initialt */
+        margin-bottom: 400px;
+    }
+    .image-container {
+        order: 2;
+        width: 80%; /* Gör bildcontainern fullbredd på mobil */
+        padding-left: 50px; /* Ta bort vänster marginal på mobil */
+    }
+
+    /* Bilder */
+    .image-style {
+        width: 100%; /* Gör bilderna fullbredd på mobil */
+        margin-bottom: 15px; /* Lägg till mellanrum mellan bilderna */
+    }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+/* Marquee-container */
+.marquee {
+    width: var(--marquee-width); /* Bredden på rullningsområdet */
+    height: var(--marquee-height);
+    background-color: #282828; /* Bakgrundsfärg */
+    overflow: hidden; /* Dölj element utanför området */
+    position: relative;
+}
+
+/* Innehåll som rullar */
+.marquee-content {
+    display: flex;
+    gap: 40px; /* Större mellanrum mellan symbolerna */
+    animation: scroll-left 15s linear infinite; /* Tiden för ett varv */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0); /* Startposition */
+    }
+    100% {
+        transform: translateX(-70%); /* Flytta hela raden utanför till vänster */
+    }
+}
+
+/* Varje symbol (li-element) */
+.marquee-content li {
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px; /* Ändra storlek här */
+    color: #eee; /* Färg på symbolerna */
+}
+
+/* Dubbelrulla genom att duplicera symbolerna */
+.marquee-content li:nth-child(n+1):nth-child(-n+var(--marquee-elements-displayed)) {
+    flex-shrink: 0;
+}
+@media only screen and (max-width: 768px) {
+    .marquee {
+        display: block; /* Säkerställ att marquee visas */
+        white-space: nowrap; /* Gör så att texten inte bryts */
+        overflow: hidden; /* Döljer text som går utanför */
+        width: 100%; /* Gör så att marquee breddar sig till hela skärmen */
+        margin-top: 10px; /* Lägg till lite avstånd om det behövs */
+    }
+    .marquee-content li {
+        
+        font-size: 30px; /* Ändra storlek här */
+        color: #eee; /* Färg på symbolerna */
+    }
+    .marquee-content {
+        display: flex;
+        animation: marquee 10s linear infinite; /* Lägg till animation för att få texten att scrolla */
+    }
+
+    /* Definiera animation för marquee */
+    @keyframes marquee {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+}
+
+
+  

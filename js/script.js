@@ -182,9 +182,51 @@ function scrollToommig() {
     document.getElementById('om-mig').scrollIntoView({ behavior: 'smooth' });
 }
 
+
+
 window.addEventListener('resize', function() {
     if (window.innerWidth !== document.documentElement.clientWidth) {
         document.body.style.transform = 'scale(1)';  // Förhindrar att zoom påverkar sidan
+    }
+});
+
+// Hämtar rot-elementet och definerar marquee-elementen
+const root = document.documentElement;
+
+// Hämtar och definierar värdet för --marquee-elements-displayed
+const marqueeElementsDisplayed = parseInt(getComputedStyle(root).getPropertyValue("--marquee-elements-displayed"));
+
+// Hämtar marquee-content
+const marqueeContent = document.querySelector("ul.marquee-content");
+
+// Sätt CSS-variabeln för --marquee-elements
+root.style.setProperty("--marquee-elements", marqueeContent.children.length);
+
+// Duplicera elementen baserat på --marquee-elements-displayed
+for (let i = 0; i < marqueeElementsDisplayed; i++) {
+  marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
+}
+
+// Responsiv justering för mobil
+window.addEventListener('resize', () => {
+  const screenWidth = window.innerWidth;
+
+  // Justera antalet visade element baserat på skärmstorleken
+  if (screenWidth <= 767) {
+    root.style.setProperty("--marquee-elements-displayed", "2"); // Ändra efter behov
+  } else {
+    root.style.setProperty("--marquee-elements-displayed", "3"); // Standardvärde för desktop
+  }
+});
+
+document.querySelector(".read-more-btn").addEventListener("click", function () {
+    const hiddenText = document.querySelector(".hidden-text");
+    if (hiddenText.style.display === "none" || !hiddenText.style.display) {
+        hiddenText.style.display = "inline";
+        this.textContent = "Visa mindre";
+    } else {
+        hiddenText.style.display = "none";
+        this.textContent = "Läs mer";
     }
 });
 

@@ -26,301 +26,436 @@
     <link rel="stylesheet" href="css/kundvagn.css">
     <link rel="stylesheet" href="css/produktsida.css">
     <link rel="stylesheet" href="css/skolprojekt.css">
+    <link rel="stylesheet" href="css/portfoliomeny.css">
+    <link rel="stylesheet" href="css/test.css">
+    <link rel="stylesheet" href="css/sem.scss">
+    <link rel="stylesheet" href="css/sem.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    
+
 </head>
     <body class="">
-        <header>
-            <div class="top-section">
-            <div class="logo">ProteinPower.se</div>
-            <div><input type="text" class="search" placeholder="Sök bland våra produkter, recept..."></div>
+        <nav class="high-tech-menu">
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-        <div>
-            <nav class="menu">
-                <button id="homeButton"> <a href="index.html">Hem</button>
-                <div class="dropdown">
-                <button id="productsButton"> <a href="produkt.html">Produkter</button>
-                <div class="dropdown-content">
-                    <a href="#clothing">Träningskläder</a>
-                    <a href="#supplements">Kosttillskott</a>
-                </div>
-            </div>
-                <button id="campaignButton"> <a href="https://blomquist799.wordpress.com/">Aktuell kampanj</button>
-                <button id="aboutButton"><a href="omoss.html">Om oss</button>
-                <button id="contactButton"><a href="kontaktaoss.html">Kontakta oss</a></button>
-                <button id="skolprojektButton"><a href="skolprojekt.html">Mina övriga skolprojekt</a></button>
-            </div>
-            <div class="icon-cart"> 
-                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.3L19 7H7.3"/>
-                  </svg>
-                  <span>0</span>
-            </div>
-        <div>
-           
-            </nav>
-        </header>
-        <div>
-            <header class="litenheader">
-                <table>
-                    <tr class="flex-container">
-                        <td class="inline">Fri frakt.</td>
-                        <td class="inline">Snabb leverans.</td>
-                        <td class="inline">Leveranstid 1-2 dagar.</td>
-                    </tr>
-                </table>
-                <div class="hamburger-menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <nav class="mobile-menu">
-                    <ul>
-                        <li><a href="index.html">Hem</a></li> <br>
-                        <li><a href="produkt.html">Produkter</a></li>
-                        <li><a href="https://blomquist799.wordpress.com/">Aktuell kampanj</a></li>
-                        <li><a href="omoss.html">Om oss</a></li>
-                        <li><a href="kontaktaoss.html">Kontakta oss</a></li>
-                        <li><a href="skolprojekt.html">Mina övriga skolprojekt</a></li>
-                    </ul>
-                </nav>
-            </header>
-        </div>
-
-    <div class= "hero">
-                <a href="produkt.html" class="cta-button">Köp nu</a>
-    </div>
-    <br>
-    <div class="Storsäljare"><h1>Storsäljare</h1>
-    </div>
-    <div class="cartTab">
-        <h1>Din Kundvagn</h1> 
-        <div class="listCart">
-            
-            
-        </div>
-    
-        <div class="btn">
-            <button class="close">Stäng</button>
-            <button class="checkOut">Till kassan</button>
-        </div>
-        </div>
-        <div class="products-container" class="listcart">
-            <div class="product">
-                <h2>T-shirt - Herr</h2>
-                <img src="images/Herr-tshirt.png">
-                <p>Pris: 299kr</p>
-                <p>Storlek: 
-                    <select name="size">
-                        <option value="S">S</option>
-                        <option value="M">M</option>
-                        <option value="L">L</option>
-                    </select>
-                </p>
-                <p>Färg:
-                    <select name="color">
-                        <option value="Svart">Svart</option>
-                        <option value="Röd">Röd</option>
-                        <option value="Blå">Blå</option>
-                    </select>
-                </p>
-                <div class="ratings">
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9734;</span>
-                    <span class="rating-average">(4.0)</span>
-                </div>
-                <button class="buy-button" >Köp nu</button>
-                <button class="read-more-button">Läs mer</button>
-                <div class="modal">
-                    <div class="modal-content">
-                        <span class="modal-close">&times;</span>
-                        <h2>T-shirt - Herr</h2>
-                        <img src="images/Herr-tshirt.png">
-                        <h3>Pris: 299kr</h3>
-                        <h3>Produktbeskrivning:</h3> 
-                         En mångsidig träningströja för herr som kombinerar <br> stil med prestanda,perfekt för både gym och utomhusaktiviteter.
-                           <p>   - Tillverkad av högkvalitativt andningsbart material för maximal komfort.
-                            <br> - Ergonomiskt designad med stretchigt tyg för ökad rörelsefrihet.
-                            <br> - Snabbtorkande egenskaper håller dig torr och bekväm under träningen.
-                            <br> - Reflekterande detaljer för ökad synlighet och säkerhet vid löpning eller träning utomhus.</p>
-                        <h3>Material: Bomull</h3> 
-                    </div>
-                </div>
-            </div>
-
-    
-        <!-- Andra produkt börjar här -->
-        <div class="product">
-            <h2>T-shirt - Dam</h2>
-            <img src="images/Dam_tshirt.png">
-            <p>Pris: 299kr</p>
-            <p>Storlek: 
-                <select name="size">
-                    <option value="XS">XS</option>
-                    <option value="S">S</option>
-                    <option value="M">M</option>
-                </select>
-            </p>
-            <p>Färg:
-                <select name="color">
-                    <option value="Svart">Svart</option>
-                    <option value="Röd">Röd</option>
-                    <option value="Blå">Blå</option>
-                </select>
-            </p>
-            <div class="ratings">
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9734;</span>
-                <span class="rating-average">(4.0)</span>
-            </div>
-            <button  class="buy-button" >Köp nu</button>
-            <button class="read-more-button">Läs mer</button>
-                <div class="modal">
-                    <div class="modal-content">
-                        <span class="modal-close">&times;</span>
-                        <h2>T-shirt - Dam</h2>
-                        <img src="images/Dam_tshirt.png">
-                        <h3>Pris: 299kr</h3>
-                        <h3>Produktbeskrivning:</h3>
-                             En mångsidig kortärmad träningströja för dam som kombinerar <br> stil med prestanda,perfekt för både gym och utomhusaktiviteter.
-                            <p>   - Tillverkad av högkvalitativt andningsbart material för maximal komfort.
-                             <br> - Ergonomiskt designad med stretchigt tyg för ökad rörelsefrihet.
-                             <br> - Snabbtorkande egenskaper håller dig torr och bekväm under träningen.
-                             <br> - Reflekterande detaljer för ökad synlighet och säkerhet vid löpning eller träning utomhus.</p>
-                            
-                        <h3>Material: Bomull</h3>
-                    </div>
-                </div>
-        </div>
-        <!-- Andra produkt slutar här -->
-        <div class="product">
-            <h2>Proteinpulver</h2>
-            <img src="images/produkt-proteinpulver.png">
-            <p>Pris: 199kr</p>
-            <p>Vikt: <select name="size">
-                <option value="1KG">1kg</option>
-            </select></p>
-            <p>Smak:
-                <select name="color">
-                    <option value="Vanilj">Vanilj</option>
-                    <option value="Choklad">Choklad</option>
-                    <option value="Blåbär">Blåbär</option>
-                </select></p>
-            <div class="ratings">
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9734;</span>
-                <span class="rating-average">(4.0)</span>
-            </div>
-            <button class="buy-button" >Köp nu</button>
-            <button class="read-more-button">Läs mer</button>
-                
+            <ul class="menu">
+                <li><a href="index.html">Hem</a></li>
+                <li><a href="startsida.html" >Proteinpower | Skapad i Visual Studio</a></li>
+                <li><a href="https://blomquist799.wixsite.com/adhigher">Adhigher | Skapad i CMS plattformen WIX </a></li>
+            </ul>
+        </nav>
         
-        </div>
-        <div class="product">
-            <h2>Jacka - Herr</h2>
-            <img src="images/Herr_jacka.png">
-            <p>Pris: 499kr</p>
-            <p>Storlek: <select name="size">
-                <option value="S">S</option>
-                <option value="M">M</option>
-                <option value="L">L</option>
-            </select></p>
-            <p>Färg:
-                <select name="color">
-                    <option value="Svart">Svart</option>
-                    <option value="Röd">Röd</option>
-                    <option value="Blå">Blå</option>
-                </select></p>
-            <div class="ratings">
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="star">&#9733;</span>
-                <span class="rating-average">(5.0)</span>
+       
+        <div class="mobile-only">
+            <div class="content">
+                <h1>Hej & välkommen till min <span class="highlight">Portfolio</span></h1>
+                <p>Vad roligt att du hittade hit! Här jag har samlat alla mina skolprojekt och spännande arbeten.
+                    Ta dig friheten att kolla runt. Hoppas du gillar vad du ser!  </p>
+                    <div class="button-container">
+                        <button onclick="scrollToMoreInfo()">Till mina arbeten</button>
+                        <button onclick="scrollToMinaErfarenheter()">Mina erfarenheter</button>
+                        <button onclick="scrollToommig()">Om mig</button>
+                    </div>
+                    <h2 class="bakgrundportfolio"> Bakgrund</h2>
+            <p>Den här hemsidan skapade jag i Visual Studio under kursen Användarvänlighet och interaktionsdesign. 
+                Från början var den faktiskt något helt annat innan den förvandlades till en portfolio. 
+                Jag byggde en fiktiv kosttillskottswebbplats som jag döpte till <br>ProteinPower 
+                – och ja, namnet kanske inte var mitt livs bästa idé.
+                Så kika runt på min påhittade hemsida! Kanske hittar du något som fångar ditt intresse. Men tyvärr, inga köp här kommer att gå igenom...</p>
+                <a href="startsida.html" class="button1">Skicka mig till Protein Power</a>
+              
             </div>
-            <button class="buy-button" >Köp nu</button>
-            <button class="read-more-button">Läs mer</button>
-                <div class="modal">
-                    <div class="modal-content">
-                        <span class="modal-close">&times;</span>
-                        <h2>Jacka - Herr</h2>
-                        <img src="images/Herr_jacka.png">
-                        <p>Pris: 499kr</p>
-                        <h3>Produktbeskrivning:</h3> En mångsidig långärmad träningströja för herr som kombinerar <br> stil med prestanda,perfekt för både gym och utomhusaktiviteter.
-                        <p>   - Tillverkad av högkvalitativt andningsbart material för maximal komfort.
-                         <br> - Ergonomiskt designad med stretchigt tyg för ökad rörelsefrihet.
-                         <br> - Snabbtorkande egenskaper håller dig torr och bekväm under träningen.
-                         <br> - Reflekterande detaljer för ökad synlighet och säkerhet vid löpning eller träning utomhus.</p>
-                     <h3>Material: 100 % polyester</h3>
+        </div>
+         <div id="more-info">
+        <div class="carousel-container-wrapper">
+            <div class="text-container">
+                <h2>Content marketing</h2>
+                <p id="content-text">
+                    Under min kurs i content marketing skapade jag innehåll som fokuserade på att väcka medvetenhet och engagemang
+                    i de tidiga stegen av köpresan. Målet var att skapa ett intresse och ge relevant information som kunde hjälpa målgruppen 
+                    att fatta beslut längre fram i processen.<span id="dots"></span> 
+                    <span id="more"> 
+                        För detta syfte använde jag Instagram-karusellinlägg som på ett visuellt tilltalande 
+                        sätt presenterade tips och användbar information. 
+                        <br><br>
+                        Jag använde också e-postutskick (slide 6 och 7) för att fortsätta engagera målgruppen med relevant innehåll. Erbjuda en användbar reseguide i 
+                        nyhetsbrevet kunde jag visa på företagets expertis och hjälpa målgruppen att planera sin resa, samtidigt som jag skapar en positiv relation
+                        till varumärket. Genom att inte fokusera på försäljning och istället erbjuda värdefullt innehåll som underlättade för mottagarna, bidrog nyhetsbrevet till 
+                        att bygga långsiktiga relationer och fortsätta driva målgruppen vidare på köpresans väg mot ett beslut.
+                    </span>
+                    <button id="myBtn" onclick="toggleMyBtn()">Läs mer</button>
+                </p>
+            </div> </div>
+            </div>
+        
+            <!-- Karusell, göm initialt -->
+            <div id="carousel" class="carousel-container" style="display: none;">
+                <input type="radio" name="carousel" id="carousel-img1" checked>
+                <input type="radio" name="carousel" id="carousel-img2">
+                <input type="radio" name="carousel" id="carousel-img3">
+                <input type="radio" name="carousel" id="carousel-img4">
+                <input type="radio" name="carousel" id="carousel-img5">
+                <input type="radio" name="carousel" id="carousel-img6">
+                <input type="radio" name="carousel" id="carousel-img7">
+            
+                <div class="carousel-track">
+                    <div class="carousel-img-container">
+                        <img src="images/CMbild1.png" alt="Projekt 1">
+                    </div>
+                    <div class="carousel-img-container">
+                        <img src="images/CMBILD2.png" alt="Projekt 2">
+                    </div>
+                    <div class="carousel-img-container">
+                        <img src="images/CMBILD3.png" alt="Projekt 3">
+                    </div>
+                    <div class="carousel-img-container">
+                        <img src="images/CMBILD4.png" alt="Projekt 4">
+                    </div>
+                    <div class="carousel-img-container">
+                        <img src="images/CMBILD5.png" alt="Projekt 5">
+                    </div>
+                    <div class="carousel-img-container">
+                        <img src="images/CMBIlD6.png" alt="Projekt 6">
+                    </div>
+                    <div class="carousel-img-container">
+                        <img src="images/CMBILD7.png" alt="Projekt 7">
                     </div>
                 </div>
+            
+                <div class="carousel-navigation">
+                    <label for="carousel-img1" class="carousel-nav-btn"></label>
+                    <label for="carousel-img2" class="carousel-nav-btn"></label>
+                    <label for="carousel-img3" class="carousel-nav-btn"></label>
+                    <label for="carousel-img4" class="carousel-nav-btn"></label>
+                    <label for="carousel-img5" class="carousel-nav-btn"></label>
+                    <label for="carousel-img6" class="carousel-nav-btn"></label>
+                    <label for="carousel-img7" class="carousel-nav-btn"></label>
+                </div>
+            </div>
+            
         </div>
-    </div>
-    <br>
-   
-    <div class="newsletter-box">
-        <h2>Vill du ha senaste nyheter om våra produkter?</h2>
-        <p>Prenumerera på vårt nyhetsbrev!</p>
-        <form action="#" method="post">
-          <input type="email" name="email" placeholder="Ange din e-postadress" required>
-          <button type="submit" class="Prenumerera">Prenumerera</button>
-        </form>
-    </div>
+        
+        
+         
+        
+        <div class="marquee">
+           
+            <ul class="marquee-content">
+              <li><i class="fab fa-google"  style="color: darkgreen;"></i> Ads</li>
+              <li><i class="fab fa-google" style="color: crimson;"></i>Analytics</li> 
+              <li><i class="fab fa-github"></i> Github</li>
+              <li><i class="fab fa-solid fa-fire" style="color: #fb5e09;"></i>Semrush</i></li>
+              <li><i class="fab fa-wordpress"></i>Wordpress</i></li>
+              <li><i class="fab fa-instagram" style="color: #d398fb;"></i>Instagram</i></li>
+              <li><i class="fa-brands fa-tiktok" style="color: #ffffff;"></i>TikTok</li>
+              <li><i class="fab fa-wix"></i></i></li>
+              <li style="font-family:Brush Script MT, Brush Script Std, cursive"><i class="fab fa-"></i>Canva</li>
+              <li><i class="fa-light fa-photo-film" style="color: #f00a21;"></i>Adobe</li>
 
-    <div class= "hero2">
-        <p> Upptäck hur Protein Power blev ett måste för fitnessfans världen över. 
-            Från sina rötter som en enkel webshop för träningskläder och kosttillskott 
-            har de snabbt blivit en ledande destination. Med fokus på kvalitet och kundnöjdhet 
-            har de erövrat marknaden och blivit det självklara valet för alla som strävar efter att nå sina träningsmål.</p>
-        <a href="omoss.html" class="cta-button2">Om oss</a>
-</div>
-    <footer>
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3><a href="index.html" target="footer-container">Hem</a></h3>
-               
-            </div>
-            <div class="footer-section">
-                <h3> <a href="produkt.html" target="footer-container">Produkter</a></h3>
-                <ul class="text"> 
-                    <li><a href="produkt.html" target="footer-container">Kosttillskott</a></li>
-                    <br>
-                    <li><a href="produkt.html" target="footer-container">Träningskläder</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3> <a href="https://blomquist799.wordpress.com/" target="footer-container">Aktuell kampanj</a></h3>
-
-            </div>
-            <div class="footer-section">
-                <h3> <a href="Omoss.html" target="footer-container">Om oss</a></h3>
-
-            </div>
-               
-               <div class="footer-section">
-                <h3><a href="kontaktaoss.html" target="footer-container">Kontakta oss</a></h3>
-                <ul class="text">
-                    <li><a href="kontaktaoss.html" target="footer-container">Telefonnummer: 123-456-789</a></li>
-                    <br>
-                    <li><a href="kontaktaoss.html" class="button-link">Hitta hit</a></li>
-                </ul>
-    
+              <li><i class="fab fa-google" style="color: darkgreen;"></i> Ads</li>
+              <li><i class="fab fa-google" style="color: crimson;"></i>Analytics</li> 
+              <li><i class="fab fa-github"></i> Github</li>
+              <li><i class="fab fa-solid fa-fire" style="color: #fb5e09;"></i>Semrush</i></li>
+              <li><i class="fab fa-wordpress"></i>Wordpress</i></li>
+              <li><i class="fab fa-instagram" style="color: #d398fb;"></i>Instagram</i></li>
+              <li><i class="fa-brands fa-tiktok" style="color: #ffffff;"></i>TikTok</li>
+              <li><i class="fab fa-wix"></i></i></li>
+              <li style="font-family:Brush Script MT, Brush Script Std, cursive"><i class="fab fa-"></i>Canva</li>
+              <li><i class="fa-light fa-photo-film" style="color: #f00a21;"></i>Adobe</li>
              
+              
+             
+            </ul>
+          </div>
+        
+        
+      
+        
+            
+        
+            <div class="seo-header">
+                <div class="text-container">
+                    <h1>SEO-projekt på Wix</h1>
+                    <p>
+                        Under SEO-kursen lärde jag mig grunderna i att optimera webbplatser för sökmotorer. 
+                        Syftet med kursen var att förstå hur man använder tekniker som sökordsanalys, via keyword planner. 
+                        on-page och off-page SEO för att förbättra synligheten och rankningen av webbplatser. 
+                        <br><br>Jag skapade projektet på CMS plattformen Wix och jag implementerade dessa strategier för att bygga en SEO-optimerad plattform. 
+                    </p>
+                    <a href="https://blomquist799.wixsite.com/adhigher" class="visit-link" target="_blank">
+                        <button>Besök hemsidan</button>
+                    </a>
+                    
+                </div>
+                <div class="image-container">
+                    <img src="images/adhigherbild.png" alt="SEO Wix hemsida förhandsvisning">
+                </div>
             </div>
         </div>
-        <div class="social-media" class="text">
-            <href="#"><img src="images/Namnlös design (30).png" alt="Instagram"></a>
-            <href="#"><img src="images/Namnlös design (32).png" alt="Facebook"></a>
+            <div class="proteinpower-section">
+                
+                    <div class="proteinpower-info">
+                        <h2>ProteinPower</h2>
+                        <p>
+                            ProteinPower är en modern hemsida som jag har utvecklat för att inspirera människor att 
+                            uppnå sina hälsomål genom proteinrika recept och produkter. Den är både användarvänlig och 
+                            mobilanpassad för en sömlös upplevelse på alla enheter.
+                        </p>
+                        <a href="startsida.html" target="_blank" class="proteinpower-button">Besök hemsidan</a>
+                        <img src="images/proteinpowerscreenshot.png" alt="ProteinPower hemsida" class="proteinpower-image">
+                    </div>
+               
+            </div>
+            <section>
+                <h2 class="semh2">SEM & webbstatistik</h2>
+                <div class="semcontainer">
+                    <div class="semcarousel">
+                        <input type="radio" name="slides" checked="checked" id="slide-1">
+                        <input type="radio" name="slides" id="slide-2">
+                        <input type="radio" name="slides" id="slide-3">
+                        <input type="radio" name="slides" id="slide-4">
+                        <input type="radio" name="slides" id="slide-5">
+                        <input type="radio" name="slides" id="slide-6">
+                        <ul class="carousel__slides">
+                            <li class="carousel__slide">
+                                
+                                <figure>
+                                    <div>
+                                        <img src="images/Googleadsfarsdag.png" alt="">
+                                    </div>
+                                    <figcaption>
+                                        Syftet med kursen SEM och webbstatistik var att ge mig en djupare förståelse 
+                                         för hur sökmotorer fungerar och hur man använder betald annonsering (SEA) och 
+                                        organiskt sök (SEO) för att öka synligheten på nätet. <i class="fa-solid fa-arrow-right"></i>
+                                        <span class="credit">Ett exempel hur en Google annons kan se ut  inför farsdag. </span>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="carousel__slide">
+                                <figure>
+                                    <div>
+                                        <img src="images/Googleadsfarsdag2.png" alt="">
+                                    </div>
+                                    <figcaption>
+                                        Kursen fokuserade på att läras sig optimera webbplatser och annonsering för att maximera trafik och konverteringar. 
+                                          Jag fick också insikter i Google analytics hur webbstatistik kan användas för att mäta och analysera kampanjens resultat, 
+                                        vilket gör det möjligt att optimera marknadsföringsstrategier. <i class="fa-solid fa-arrow-right"></i>
+                                        
+                                        <span class="credit">Google annons exempel två. </span>                            
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="carousel__slide">
+                                <figure>
+                                    <div>
+                                        <img src="images/googleanalytics2.png" alt="">
+                                    </div>
+                                    <figcaption>
+                                        Analysera data via webbstatistik kunde jag förstå hur man använder sökordsstrategier, målgruppsanpassa annonsering och 
+                                        mätvärden som klickfrekvens (CTR), konverteringsfrekvens och ROI för att förbättra resultatet av annonserna. 
+                                        
+                                        <span class="credit"> Bild ifrån Google Analytics</span>                            
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            
+                           
+                         
+                        </ul>    
+                        <ul class="carousel__thumbnails">
+                            <li>
+                                <label for="slide-1"><img src="images/Googleadsfarsdag.png" alt=""></label>
+                            </li>
+                            <li>
+                                <label for="slide-2"><img src="images/Googleadsfarsdag2.png" alt=""></label>
+                            </li>
+                            <li>
+                                <label for="slide-3"><img src="images/googleanalytics2.png" alt=""></label>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        
+        <div id="minaerfarenheter">
+            <section class="other-courses">
+                <h2>Erfarenheter</h2>
+                <div class="courses-container">
+                    <div class="course-card">
+                        <img src="images/agilprojektledningbild.jpg" alt="Agil projektledning" class="course-image">
+                        <h3 class="course-title">Agil Projektledning</h3>
+                        <p2 class="course-description">Under kursen Agil Projektledning fick jag lära mig grunderna i att leda projekt med fokus på flexibilitet och samarbete. Vi arbetade med metoder för att anpassa oss till förändringar och säkerställa att teamet levererar värde i varje steg. Kursen gav mig förståelse för hur man skapar struktur och tydliga mål i projekt samtidigt som man prioriterar kommunikation och laganda.</p2>
+                    </div>
+                    <div class="course-card">
+                        <img src="images/retorikbild.jpg" alt="Reotorik & presentationsteknik" class="course-image">
+                        <h3 class="course-title">Retorik & presentationsteknik</h3>
+                        <p2 class="course-description">Kursen gav mig verktyg för att skapa och framföra övertygande presentationer. Syftet var att förbättra min förmåga att kommunicera idéer tydligt och självsäkert inför olika målgrupper.</p2>
+                    </div>
+                    <div class="course-card">
+                        <img src="images/digitalakanalerbild.jpg" alt="Digitala kanaler & Arbetssätt" class="course-image">
+                        <h3 class="course-title">Digitala kanaler & Arbetssätt</h3>
+                        <p2 class="course-description">Här fördjupade jag mig i hur olika digitala kanaler fungerar och hur de kan användas för att stärka varumärkeskännedom. Syftet var att utveckla strategier för att nå rätt målgrupp med rätt budskap vid rätt tidpunkt.</p2>
+                    </div>
+                    <div class="course-card">
+                        <img src="images/semwebbstatistikbild.jpg" alt="SEM & webbstatistik" class="course-image">
+                        <h3 class="course-title">SEM & webbstatistik</h3>
+                        <p2 class="course-description">Denna kurs fokuserade på sökmotormarknadsföring och analys av webbplatsdata. Jag lärde mig att optimera kampanjer och använda statistikverktyg för att förbättra resultat och förstå användarbeteenden, såsom Google Analytics och Google Ads</p2>
+                    </div>
+                    <div class="courses-container extra-courses hidden">
+                <div class="courses-container">
+                    <div class="course-card">
+                        <img src="images/nyseobild.jpg" alt="seo" class="course-image">
+                        <h3 class="course-title">SEO</h3>
+                        <p2 class="course-description">Under SEO-kursen byggde jag en hemsida i Wix och fick praktisk erfarenhet av att optimera den för sökmotorer. Jag arbetade med verktyg som SEMrush och Google Keyword Planner för att identifiera och använda relevanta sökord. Genom att analysera trafikdata och implementera strategiska förbättringar lärde jag mig hur man stärker en webbplats synlighet och når rätt målgrupp online. </p2>
+                    </div>
+                    <div class="course-card">
+                        <img src="images/socialamedierbild.jpg" alt="sociala medier & influencer marketing" class="course-image">
+                        <h3 class="course-title">Sociala medier & Influencer marketing</h3>
+                        <p2 class="course-description">Här lärde jag mig att skapa kampanjer på sociala plattformar som Instagram och TikTok och ta anvädning av Metas analysverktyg . Syftet var att använda sociala medier för att bygga engagemang och lojalitet.</p2>
+                    </div>
+                    <div class="course-card">
+                        <img src="images/contentmarketingbild.jpg" alt="content marketing" class="course-image">
+                        <h3 class="course-title">Content Marketing</h3>
+                        <p2 class="course-description">Kursen fokuserade på att skapa innehåll som engagerar målgruppen att ta beslut i sin köpresa. Här var det inte fokus på att sälja en produkt eller tjänst utan att skapa mervärde för kunden. Jag lärde mig att använda storytelling och data för att skapa värdefullt innehåll som stärker kundrelationer.</p2>
+                    </div>
+                    <div class="course-card">
+                        <img src="images/ekonomijuridikbild.jpg" alt="Ekonomi & Juridik" class="course-image">
+                        <h3 class="course-title">Ekonomi & Juridik</h3>
+                        <p2 class="course-description">Denna kurs gav mig grundläggande kunskaper inom ekonomiska analyser och juridiska aspekter av digital marknadsföring. Fokus låg på budgethantering, avtal och immateriella rättigheter.</p2>
+                    </div>
+                </div>
+                <div class="courses-container">
+                    <div class="course-card">
+                        <img src="images/htmlcssbild.jpg" alt="Användbarhet & interkationsdesign" class="course-image">
+                        <h3 class="course-title">Användbarhet & interkationsdesign</h3>
+                        <p2 class="course-description">Under denna kurs byggde jag hemsidan du är inne på och läser just nu, med hjälp av Visual Studio och fokus på HTML och CSS, samt grunder i JavaScript. Jag lärde mig skapa användarvänliga gränssnitt och designa lösningar som förbättrar användarupplevelsen. Målet var att utveckla en intuitiv och engagerande digital plattform.</p2>
+                    </div>
+                    <div class="course-card">
+                        <img src="images/datadrivenforsaljning.jpg" alt="datadriven försäljning" class="course-image">
+                        <h3 class="course-title">Datadriven försäljning</h3>
+                        <p2 class="course-description">Kursen handlade om hur data kan användas för att förstå och engagera kunder på ett mer personligt sätt. Vi fördjupade oss i verktyg som CRM, social selling och marketing automation, och lärde oss att anpassa försäljningsstrategier för olika kundgrupper, som SMB- och LCP-kunder. Det gav mig insikter i hur teknik och data kan bidra till att bygga starkare kundrelationer och driva försäljning på ett smidigare och mer effektivt sätt.</p2>
+                    </div>
+                    <div class="course-card">
+                        <img src="images/digitalanalys.jpg" alt="Digital analys" class="course-image">
+                        <h3 class="course-title">Digital Analys</h3>
+                        <p2 class="course-description">Här fokuserade jag på att analysera och tolka digitala datapunkter. Syftet var att kunna mäta resultat, förstå trender och optimera digitala kampanjer baserat på insikter i Google analytics.</p2>
+                    </div>
+                    <div class="course-card">
+                        <img src="images/copenhagen.jpg" alt="erasmuslia" class="course-image">
+                        <h3 class="course-title">Erasmus LIA 1 & LIA 2</h3>
+                        <p2 class="course-description">Under min första praktik valde jag att praktisera utomlands på en marknadsföringsbyrå i Köpenhamn, vilket gav mig värdefulla internationella erfarenheter. Till den andra praktiken valde jag att stanna kvar i Sverige och arbeta på en marknadsavdelning i de värmländska skogarna, närmare bestämt på ett rekryteringsföretag i Karlstad. Kombinationen av internationellt och lokalt perspektiv har gett mig en bred förståelse för marknadsföringens olika utmaningar och möjligheter.</p2>
+                    </div>
+                </div>
+                    </div> 
+            </section>
         </div>
-    </footer>
+
+    
+    <br><br>
+        <div id="om-mig">
+            <div class="timeline-container">
+               <center> <div class="about-container">
+                    <div class="image-section">
+                        <img src="images/bildpamig.jpeg" alt="Bild på Karl Blomquist">
+                    </div>
+                    <div class="text-section">
+                        <h1>Karl Blomquist</h1>
+                        <p><strong>Född:</strong> 11 juni 1999</p>
+                        <p><strong>Tel:</strong> 073 53 31 970</p>
+                        <p><strong>Mail:</strong> blomquist799@gmail.com</p>
+                        <p><strong>Mina intressen:</strong> Träna, Manchester United och att koda!</p>
+                        <p>
+                            Mitt namn är Karl och är en 25-årig värmlänning som pluggar digital marknadsföring i Stockholm.
+                             I slutet december tar jag examen, och kan knappt vänta på att få dyka in i arbetslivet inom marknadsföring 
+                             och webb. <br> <br>Att utmana mig själv och lära mig nya saker är något som alltid har varit 
+                             viktigt för mig, och jag har alltid strävat efter att ta mig utanför min comfort zone. Jag tror på att skapa en 
+                             balans mellan arbete och fritid, och att spendera tid med nära och kära är viktigt för mig. Du hittar även mig på 
+                             gymmet och mycket engagerad i Manchester Uniteds matcher – min stora passion utanför jobbet!
+                        </p>
+                    </div>
+                    </div>
+                </div>
+            </center>
+               
+           
+        <div class="timeline-wrapper">
+            <h1>Timeline Cards</h1>
+            <ul class="timeline">
+              <li style="--accent-color:#41516C">
+                <div class="timeline-date">2023</div>
+                <div class="timeline-title">Studierna börjar | Januari 2023</div>
+                <div class="timeline-descr">Började studera digital marknadsföring på Sälj & Marknadshögskolan i Stockholm.</div>
+              </li>
+              <li style="--accent-color:#FBCA3E">
+                <div class="timeline-date">2023</div>
+                <div class="timeline-title">Första LIA | Oktober-December </div>
+                <div class="timeline-descr">Hösten 2023 valde jag att ta steget utomlands för min första praktikplats via Erasmus i Köpenhamn. 
+                    Där praktiserade jag på en marknadsföringsbyrå med fokus på influencer marketing. Det var en otroligt givande tid
+                     där jag fick en bred erfarenhet och lärde mig mycket om hur marknadsföring fungerar i ett annat land än Sverige. 
+                     <br> <br>Jag hade som uppgift att etablera danskarnas plattform på svenska marknaden och hade full kontroll och 
+                     eget ansvar över hur jag skulle gå tillväga för att lyckas. <br><br> Att praktisera utomlands gav mig en unik inblick 
+                     i olika arbetsmetoder och kulturella skillnader, vilket har stärkt min förmåga att anpassa mig till nya miljöer och situationer.
+                      Det gav mig också möjligheten att arbeta med människor från olika bakgrunder och lära mig att kommunicera effektivt på två olika språk.</div>
+              </li>
+              <li style="--accent-color:#E24A68">
+                <div class="timeline-date">2024</div>
+                <div class="timeline-title">Andra LIA | September-December 2024</div>
+                <div class="timeline-descr">Ett år senare och jag är tillbaka i Sverige till min hemort, Karlstad. Idag praktiserar jag på 
+                    ett rekryteringsföretag vid namn Procruitment. Där sitter jag på marknadsavdelningen och hjälper med deras marknadsföringsstrategier.
+                     <br> <br> Jag arbetar med att utveckla både en karriärsida och intranät, samtidigt som jag jobbar med deras ON/OFF-page SEO, Lokal SEO och teknisk SEO. Jag jobbar både i CMS samt med HTML och CSS, och har även hand om 
+                     verktyg som Keyword Planner och Google Analytics.</div>
+              </li>
+              <li style="--accent-color:#1B5F8C">
+                <div class="timeline-date">2025</div>
+                <div class="timeline-title">Examen | Januari </div>
+                <div class="timeline-descr">Klar med mina studier och ser fram emot arbetslivet!</div>
+              </li>
+             
+            </ul>
+          </div>
+          
+        
+    <script>   // Funktion för att scrolla ner till sektionen
+        function scrollToSection() {
+       document.getElementById('more-info').scrollIntoView({ behavior: 'smooth' });
+        }
+          // Funktion för att scrolla ner till sektionen
+     function scrollToSection() {
+        document.getElementById('minaerfarenheter').scrollIntoView({ behavior: 'smooth' });
+    }
+    function scrollToSection() {
+        document.getElementById('om-mig').scrollIntoView({ behavior: 'smooth' });
+    }</script>
+
+<script>
+    function toggleMyBtn() {
+    var dots = document.getElementById("dots");
+    var moreText = document.getElementById("more");
+    var btnText = document.getElementById("myBtn");
+    var carousel = document.getElementById("carousel");
+
+    // Toggla visibilitet för karusellen och mer text för myBtn
+    if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btnText.innerHTML = "Läs mer";
+        moreText.style.display = "none";
+        carousel.style.display = "none";
+    } else {
+        dots.style.display = "none";
+        btnText.innerHTML = "Läs mindre";
+        moreText.style.display = "inline";
+        carousel.style.display = "block";
+    }
+}
+
+
+
+ </script>
     <script src="js/script.js"></script>
     <script src="js/hamburger.js"></script>
 

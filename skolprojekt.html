@@ -23,7 +23,7 @@
     
     <title>Proteinpower - Startsida</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/meny.css">
+    <link rel="stylesheet" href="css/portfoliomeny.css">
     <link rel="stylesheet" href="css/startsida.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/omoss.css">
@@ -32,66 +32,21 @@
     <link rel="stylesheet" href="css/skolprojekt.css">
 </head>
 <body>
-    <header>
-        <div class="top-section">
-        <div class="logo">Min Portfolio</div>
+    <nav class="high-tech-menu">
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="menu">
+            <li><a href="index.html">Hem</a></li>
+            <li><a href="startsida.html" >Proteinpower | Skapad i Visual Studio</a></li>
+            <li><a href="#om-mig" onclick="navigateToSection('om-mig')">Adhigher | Skapad i CMS plattformen WIX </a></li>
+        </ul>
+    </nav>
+    
+    <div>
         
-        <div><input type="text" class="search" placeholder="Sök bland våra produkter, recept..."></div>
-        </div>
-    <div>
-        <nav class="menu">
-            <button id="homeButton"> <a href="index.html">Hem</button>
-            <div class="dropdown">
-            <button id="productsButton"> <a href="produkt.html">Produkter</button>
-            <div class="dropdown-content">
-                <a href="#supplements">Kosttillskott</a>
-                <a href="#clothing">Träningskläder</a>
-            </div>
-        </div>
-            <button id="campaignButton"> <a href="https://blomquist799.wordpress.com/">Aktuell kampanj</button>
-            <button id="aboutButton"><a href="omoss.html">Om oss</button>
-            <button id="contactButton"><a href="kontaktaoss.html">Kontakta oss</a></button>
-            <button id="skolprojektButton"><a href="skolprojekt.html">Mina övriga skolprojekt</a></button>
-        </div>
-        <div class="icon-cart"> 
-            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.3L19 7H7.3"/>
-              </svg>
-              <span>0</span>
-        </div>
-    <div>
-       
-        </nav>
-
-       
-    </header>
-    <div>
-        <header class="litenheader">
-            <table>
-                <tr class="flex-container">
-                    <td class="inline">Fri frakt.</td>
-                    <td class="inline">Snabb leverans.</td>
-                    <td class="inline">Leveranstid 1-2 dagar.</td>
-                </tr>
-            </table>
-            <div class="hamburger-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <nav class="mobile-menu">
-                <ul>
-                    <li><a href="index.html">Hem</a></li> <br>
-                    <li><a href="produkt.html">Produkter</a></li>
-                    <li><a href="https://blomquist799.wordpress.com/">Aktuell kampanj</a></li>
-                    <li><a href="omoss.html">Om oss</a></li>
-                    <li><a href="kontaktaoss.html">Kontakta oss</a></li>
-                    <li><a href="skolprojekt.html">Mina övriga skolprojekt</a></li>
-                </ul>
-            </nav>
-            
-        </header>
-    </div>
 
     <header class="skolprojektheader">
         <p1 >Välkommen till min </p1>

@@ -8,4 +8,8 @@ hamburgerMenu.addEventListener('click', () => {
 });
 
 // CSS för att visa menyn
+function toggleMenu() {
+    const menu = document.querySelector('.high-tech-menu');
+    menu.classList.toggle('menu-active');
+}
 
